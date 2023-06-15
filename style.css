@@ -94,7 +94,8 @@ li.nav_li a.nav_link {
 
 li.nav_li a:hover {
 	background-color:rgb(70,0,185,255);
-}
+	color:white;
+	}
 
 /*Codigo tomado de ChatGPT*/
 .faq .answer {
