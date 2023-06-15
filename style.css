@@ -93,7 +93,7 @@ li.nav_li a.nav_link {
 }
 
 li.nav_li a:hover {
-	background-color:orange;
+	background-color:rgb(70,0,185,255);
 }
 
 /*Codigo tomado de ChatGPT*/
