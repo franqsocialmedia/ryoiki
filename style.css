@@ -67,8 +67,8 @@ img#main_logo {
 nav{
 	/*background:gray;*/
 	width:60%;
-
-	float:right;
+	
+	display:inline;
 
 }
 
@@ -76,8 +76,9 @@ ul.nav_ul{
 	list-style-type:none;
 	margin:0;
 	padding:0;
+	margin-left:50%;
+	min-width:280px;
 	
-
 }
 
 li.nav_li{

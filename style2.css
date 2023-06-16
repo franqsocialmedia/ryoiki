@@ -1,0 +1,22 @@
+*{
+margin:0;
+paddin:0;
+list-style-type:none;
+}
+header{
+	background-color:#727838;
+}
+div.main{
+	background-color:#137588;
+}
+
+footer{
+	background-color:#777888;
+	text-align:center;
+
+}
+
+a{
+	text-decoration:none;
+	
+}
