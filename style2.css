@@ -8,6 +8,11 @@ header{
 }
 div.main{
 	background-color:#137588;
+	
+	width:90%;
+	
+	padding-left:5%;
+	padding-right:5%;
 }
 
 footer{
@@ -19,6 +24,8 @@ footer{
 a{
 	text-decoration:none;
 	
+	color:black;
+	
 }
 
 a.nav_li{
@@ -26,6 +33,7 @@ a.nav_li{
 	padding:20px 45px;
 	background-color:#23G6P7;
 	
+	color:black:
 	
 
 	
@@ -33,7 +41,9 @@ a.nav_li{
 a.nav_logo{
 	display:block;
 	padding:20px 50px;
-	background-color:#23G6P7;
+	
+	
+	color:black:
 }
 	
 	
@@ -54,31 +64,56 @@ li{
 
 li.paginas{
 	position:relative;
-	left:50%;
+	left:10%;
 	bottom:35px;
 	
 	border:solid 1px;
+}
+li.paginas_aparte{
+	position:relative;
+	left:20%;
+	bottom:35px;
+	
+	border:solid 1px;
+}
+
+input.btn_sesion{
+	width:140px;
+	height:30px;
+	
+	border-radius:10px;
+	
+	background-color:black;
+	color:white;
+	
+	font-weight:bold;
 }
 
 article.capsula{
 display:inline-block;
 background-color:green;
 
-width:25%;
-height:400px;
+width:30%;
+height:50%;
+
+position:relative;
+bottom:89px;
 
 }
 
 p.titulo{
-	height:100%;
+	
 	background-color:gray;
 
+	
+	height:100%;
+	
 	text-align:center;
 	vertical-align:bottom;
 	
-	padding-top:50px;
+	position:relative;
+	bottom:52px;
 	
-
 }
 
 article.imagenes{
@@ -86,6 +121,93 @@ article.imagenes{
 	background:yellow;
 	color:red;
 	
-	width:45%;
-	height:400px;
+	width:65%;
+	height:55%;
+	
+	padding-left:30px;
+	
+}
+
+img.perfiles{
+	width:70%;
+	height:60%;
+	
+	position:relative;
+	top:35px;
+
+}
+
+div.boton_flotante {
+	float:left;
+	
+	width:290px;
+	height:80px;
+	
+	/*background-color:white;*/
+
+	position:absolute;
+	z-index:2;
+	left:290px;
+	top:430px;
+	
+}
+
+input.texto_curso{
+	width:60%;
+	height:100%;
+	
+	vertical-align:middle;
+	text-align:center;
+	
+	position:relative;
+	left:5px;
+	
+	border:solid, 2px;
+	border-color:white;
+}
+
+input.boton_envio{
+	width:38%;
+	height:100%;
+	
+	vertical-align:middle;
+	
+	background-color:rgb(113,184,110);
+	
+	font-weight:bold;
+	
+	border:solid, 1px;
+	border-color:white;
+}
+
+section.section_1{
+	background-color:red;
+	
+	height:auto;
+}
+
+p.acceso{
+	text-align:center;
+	
+	color:pink;
+	
+	font-weight:bold;
+	font-size:40px;
+}
+
+p.links{
+	text-align:center;
+	padding:40px 20px;
+}
+
+a.links_acceso{
+	padding:10px 30px;
+	
+	color:black;
+	
+	text-transform:uppercase;
+}
+
+a.links_acceso:hover{
+	text-decoration:underline;
 }
