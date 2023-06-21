@@ -105,7 +105,7 @@ li.nav_li a:hover {
 .faq .answer {
   max-height: 0;
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: max-height 6s ease;
 }
 
 .faq .question {
@@ -115,7 +115,7 @@ li.nav_li a:hover {
 
 .faq input[type="radio"]:checked ~ .answer {
   max-height: 300%; /* Ajusta la altura deseada */
-  transition: max-height 0.3s ease;
+ 
 }
 
 /*mi codigo...*/
