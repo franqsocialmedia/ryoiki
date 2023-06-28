@@ -1,0 +1,221 @@
+/*--------- CONTROLADOR GENERAL -----------*/
+*{
+	padding:0;
+	margin:0;
+	
+}
+
+/*--------- CUERPO DE LA PAGINA -----------*/
+body{
+
+	width:100%;
+	height:auto;
+
+	background-color:black;
+	color:white;
+
+}
+
+header{
+
+	width:100%;
+	height:auto;
+
+	background-color:white;
+	color:black;
+
+}
+
+main{
+	width:100%;
+	height:auto;
+
+	background-color:black;
+
+}
+
+footer{
+
+	width:100%;
+	height:6%;
+
+	background-color:black;
+	
+	text-align:center;
+	vertical-align:middle;
+	
+	color:white;
+
+}
+
+
+/*--------- VARIABLES -----------*/
+:root{
+	--x:red;
+}
+
+/*--------- ANIMACIONES -----------*/
+@keyframes x{
+	0%{:;}
+	100%{:;}
+}
+
+
+/*--------- SELECTORES -----------*/
+ul{
+	list-style-type:none;
+}
+
+img.logo{
+	width:23%;
+	
+	position:relative;
+	right:100px;
+}
+
+li.link_logo{
+	display:inline-block;
+	
+	
+	padding:0px 9%;
+	
+}
+
+li.link_li{
+	display:inline-block;
+	
+	
+	padding:6px 4%;
+	
+	position:relative;
+	bottom:30px;
+	
+	font-family:helvetica, sans-serif;
+	
+}
+
+li.link_li:hover{
+	
+	border-style:none solid none solid;
+}
+
+a{
+	text-decoration:none;
+}
+
+div.flexbox{
+	display:flex;
+}
+
+aside{
+	width:40%;
+	height:auto;
+	
+	
+	display:inline-block;
+}
+
+section.texto{
+	width:45%;
+	
+	
+	display:inline-block;
+}
+
+p{
+}
+
+img.sustituto{
+	width:100%;
+	
+}
+
+p.descripcion{
+	max-width:20%;
+	margin-left:70px;
+	
+	position:relative;
+	top:30px;
+}
+
+div.titulos{
+	vertical-align:middle;
+	line-height:0.8;
+	
+	position:relative;
+	top:100px;
+	left:30px;
+}
+
+p.sello{
+	font-size:16pt;
+	
+	font-family:helvetica, sans-serif;
+	
+	color:orange;
+}
+
+h1.titulo{
+	font-size:80pt;
+}
+
+span.mini{
+	font-size:10pt;
+	
+	position:relative;
+	left:-26px;
+	bottom:30px;
+	
+	color:yellow;
+}
+
+
+section.linea{
+	width:100%;
+	
+	
+	display:inline-block;
+	
+	background-color:rgba(17, 0, 158, 50%);
+	
+	
+	color:white;
+}
+
+.btn_abajo{
+
+	font-size:20pt;
+
+	background-color:orange;
+	
+	width:60px;
+	height:60px;
+	
+	text-align:center;
+	vertical-align:middle;
+	
+	border-radius:30px;
+
+	float:right;
+	
+	margin-right:230px;
+}
+
+a.btn_flecha div.btn_abajo{
+	transform:rotate(0deg);
+	
+	transition:1s ease-out;
+}
+
+a.btn_flecha div.btn_abajo:hover{
+	transform:rotate(360deg);
+	
+	width:70px;
+	height:70px;
+	
+	border-radius:35px;
+	
+	font-size:25pt;
+	
+	background-color:yellow;
+}
