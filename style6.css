@@ -10,6 +10,7 @@
 /*--------- VARIABLES ---------*/
 :root{
 	--x:red;
+	--height:500px;
 }
 
 /*--------- ANIMACION ---------*/
@@ -38,7 +39,7 @@ main{
 	background-color:red;
 	
 	width:100%;
-	height:auto;
+	height:var(--height);
 	
 }
 aside{
@@ -46,10 +47,15 @@ aside{
 	background-color:orange;
 	
 	width:15%;
-	height:100%;
+	height:var(--height);
 	
 	
 	float:left;
+	
+}
+
+aside ol li{
+	margin:10px 40px;
 }
 footer{
 
@@ -85,7 +91,7 @@ nav .link_li{
 a{
 	text-decoration:none;
 }
-section div{
+section div.imagenes{
 
 	display:flex;
 }
@@ -97,8 +103,7 @@ section.main{
 }
 
 section section{
-	border-style:solid;
-	
+	height:var(--height);
 }
 
 .division{
