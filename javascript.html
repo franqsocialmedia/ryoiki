@@ -19,9 +19,10 @@
 		<header>
 			<nav>
 				<ul>
+					<li class="link_logo"><a href="#"><img src="IMG/raton.jpg" class="logo"></a></li>
 					<li class="link_li"><a href="#">Link-1</a></li>
 					<li class="link_li"><a href="#">Link-2</a></li>
-					<li class="link_li"><a href="#">Link-3</a></li>
+					
 				</ul>
 			</nav>
 		</header>
@@ -40,12 +41,65 @@
 				<div class="division">
 					<section>
 						<div>
-							<p id="F">
-								Prueba Grupo 1
-							</p>
 							<p>
-								Prueba Grupo 2
+								Parrafo y un <mark>marcado</mark>
 							</p>
+						<hr>
+							<blockquote>
+								Blockquote. Prueba de 
+								capa 8.
+							</blockquote>
+						<hr>
+							<cite>
+								cite
+							</cite>
+						<hr>
+							<textarea>
+								textarea
+							</textarea>
+						<hr>
+							<details>
+								<summary>Titulo de Summary</summary>
+									<p>Details > Summary > P</p>						
+							</details>
+							<details>
+								<summary>Titulo de Summary 2</summary>
+									<p>Details > Summary > P</p>						
+							</details>
+						<hr>
+							<select>
+								<option>Yan</option>
+								<option>Giant</option>
+								<option>Jean</option>
+								<option>Gian</option>
+								<option>Yan-yan</option>
+							</select>
+						<hr>
+							<table border="1">
+								<th colspan="2">Titulo</th>
+							<tr>
+								<td>Nombre:</td>
+								<td>Apellido:</td>
+							<tr>
+								<td>Giantfranco</td>
+								<td>Santos</td>
+							</table>
+						<hr>
+							<form action="#" method="POST" id="envio">
+								
+									<input type="text" name="nombre" placeholder="Prueba de texto">
+									<input type="submit"value="Enviar">
+									<input type="reset"value="Borar">
+									<radio>
+										<input type="radio">Hola
+										<input type="radio">Hola 2
+										<input type="radio">Hola 3
+									</radio>
+									<input type="checkbox">Adios
+									<input type="checkbox">Adios 2
+									<input type="checkbox">Adios 3
+							</form>
+						<hr>
 							<p>
 								<script>
 									document.write(prueba);
@@ -56,8 +110,25 @@
 					
 					<section>
 						<div class="imagenes">
-							<img src="IMG/azul.jpg">
-							<img src="IMG/azul.jpg">
+							<figure>
+							<picture>
+								<source media="(min-width: 1060px)" srcset="IMG/azul.jpg">
+								<source media="(min-width: 800px)" srcset="IMG/verde.jpg">
+								
+								<img src="IMG/azul.jpg" class="imagen">
+								<figcaption>Fig. Holas</figcaption>
+							</picture>
+							</figure>
+							
+							<figure>
+							<picture>
+								<source media="(min-width: 1060px)" srcset="IMG/verde.jpg">
+								<source media="(min-width: 800px)" srcset="IMG/azul.jpg">
+								
+								<img src="IMG/azul.jpg" class="imagen">
+								<figcaption>Fig. Holas</figcaption>
+							</picture>
+							</figure>
 						</div>
 					</section>
 				</div>
