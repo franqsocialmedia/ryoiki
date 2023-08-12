@@ -1,0 +1,149 @@
+
+/*--------- TODO -----------*/
+* {
+	margin:0;
+	padding:0;
+	
+}
+
+/*--------- VARIABLES -----------*/
+:root{
+	--v1:#706FFE;
+	--v2:#588BFE;
+	--v3:#43A6FE;
+	--v4:#8A50FF;
+	--v5:#2CC3FD;
+}
+
+/*--------- MEDIA QUERY -----------*/
+@media screen and (min-width:1060px;){
+	footage{
+		color:green;
+	}
+}
+
+/*--------- ANIMACION -----------*/
+@keyframes here{
+	0%{left:0px;}
+	20%{left:20px;}
+	40%{left:-20px}
+	60%{left:10px}
+	80%{left:-10px}
+	100%{left:0px}
+}
+
+/*--------- ESTRUCTURA GENERAL -----------*/
+body{
+	background-color:white;
+}
+
+header{
+	background-color:var(--v1);
+	}
+
+nav{
+	background-color:var(--v4);
+	
+	height:140px;
+	}
+
+nav a.a_link{
+	
+	width:15%;
+	
+	background-color:white;
+	
+	padding: 20px 80px;
+	
+	position:relative;
+	left:54%;
+	
+	
+}
+
+nav a.a_logo{
+	
+	width:15%;
+	
+	
+}
+
+img.img_logo{
+	max-width:150px;
+	
+	position:relative;
+	
+}
+img.img_logo:hover{
+	animation-delay:3s;
+	animation:here 2s ease;
+	
+}
+
+main{
+	background-color:var(--v2);
+	
+	height:auto;
+	}
+aside{
+	background-color:white;
+	
+	color:red;
+	
+	width:19%;
+	height:500px;
+	
+	display:inline-block;
+	
+	position:relative;
+	top:0px;
+	
+	
+	transition:2s;
+}
+
+aside:hover{
+	width:0%;
+	
+}
+div{
+	background-color:var(--v5);
+	
+	height:500px;
+	width:80%;
+	
+	display:inline-block;
+	}
+
+section{
+	background-color:white;
+	}
+
+footer{
+	background-color:var(--v3);
+	
+	height:120px;
+	
+	}
+
+hr{
+	width:80%;
+	
+	position:relative;
+	left:10%;
+
+}
+
+p.footer_p{
+	color:red;
+	background-color:yellow;
+	
+	vertical-align:middle;
+	text-align:center;
+	
+}
+
+a{
+	text-decoration:none;
+	color:orange;
+}
