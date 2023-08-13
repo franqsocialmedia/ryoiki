@@ -8,11 +8,11 @@
 
 /*--------- VARIABLES -----------*/
 :root{
-	--v1:#706FFE;
-	--v2:#588BFE;
-	--v3:#43A6FE;
-	--v4:#8A50FF;
-	--v5:#2CC3FD;
+	--v1:#5B5B5B;
+	--v2:#E9E9E9;
+	--v3:#9A9A9A;
+	--v4:#D4D4D4;
+	--v5:#D0D0D0;
 }
 
 /*--------- MEDIA QUERY -----------*/
@@ -84,7 +84,14 @@ main{
 	background-color:var(--v2);
 	
 	height:auto;
+	
+	text-align:center;
 	}
+	
+main section {
+	text-align:center;
+}
+
 aside{
 	background-color:white;
 	
@@ -113,11 +120,14 @@ div{
 	width:80%;
 	
 	display:inline-block;
+	
+	color:white;
 	}
 
 section{
-	background-color:white;
+	background-color:#5B5B5B;
 	}
+	
 
 footer{
 	background-color:var(--v3);
@@ -157,8 +167,9 @@ form.calculadora{
 	width:300px;
 	height:330px;
 	
-	background-color:red;
+	background-color:var(--v5);
 	
+	margin-left:35%;
 }
 
 input{
@@ -197,11 +208,13 @@ input.btn_signo{
 div.num{
 	width:70%;
 	height:auto;
+	
+	background-color:var(--v5);
 }
 
 div.signo{
 	width:25%;
 	height:auto;
 	
-	background-color:black;
+	background-color:var(--v5);
 }
