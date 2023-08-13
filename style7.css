@@ -147,3 +147,61 @@ a{
 	text-decoration:none;
 	color:orange;
 }
+
+/*------------ CODIGO ESPECIFICO ------------*/
+
+form.calculadora{
+	text-align:center;
+	vertical-align:middle;
+
+	width:300px;
+	height:330px;
+	
+	background-color:red;
+	
+}
+
+input{
+	
+		font-weight:bold;
+	
+	}
+
+input.resultados{
+	width:270px;
+	height:60px;
+	
+	margin-bottom:10px;
+	margin-top:10px;
+	
+	font-size:18pt;
+	color:gray;
+	
+	text-align:center;
+}
+
+input.btn_num{
+	width:60px;
+	height:60px;
+	
+	display:inline-block;
+}
+
+input.btn_signo{
+	width:60px;
+	height:60px;
+	
+	display:inline-block;
+}
+
+div.num{
+	width:70%;
+	height:auto;
+}
+
+div.signo{
+	width:25%;
+	height:auto;
+	
+	background-color:black;
+}
