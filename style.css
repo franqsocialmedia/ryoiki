@@ -3,4 +3,13 @@
 	margin:0;
 }
 
-:root
+:root{
+	--color1:#FEE0D8;
+	--color2:#F5A39B;
+	--color3:#720117;
+	--color4:#D65959;
+	--color5:#8F2B25;
+	--color6:#90161B;
+}
+
+@keyframes 
