@@ -1,157 +1,27 @@
-html{
-	scroll-behavior:smooth;
-}
+/*-- AJUSTE GENERAL --*/
+html{}
 
-* {
-	padding:0;
-	margin:0;
-	
-	
-}
+*{}
 
-:root{
-	--color1:#FEE0D8;
-	--color2:#F5A39B;
-	--color3:#720117;
-	--color4:#D65959;
-	--color5:#8F2B25;
-	--color6:#90161B;
-}
+/*-- VARIABLES --*/
+:root{}
 
-@keyframes welcome{
-	0%{};
-	50%{};
-	100%{};
-}
+/*-- ANIMACION --*/
+@keyframes welcome{}
 
-@media screen and (max-width:506px){
-	footer{
-		color:red;
-	}
-} 
-
-/*-- ESTRUCTURA --*/
-
-body{ 
-	background-color:var(--color3);
- }
+/*-- ESTRUCTURA GENERAL --*/
+body{  }
 header{  }
-main{ 
-	
-	background-color:var(--color5);
- }
-footer{ 
-	text-align:center;
-	padding-top:30px;
-	
-	background-color:var(--color4);
-	
-	font-size:16px;
- }
+main{  }
+footer{  }
 
-/*-- PAGE --*/
-hr{
-	width:80%;
-	margin-left:10%;
-	margin-bottom:20px;
-}
-a.nav_a{
-	text-decoration:none;
-	
-	vertical-align:middle;
-}
 
-ul{
-
-	display:inline-block;
-	
-	width:75%;
-	
-	padding-left:60%;
-	vertical-align:middle;
-}
-
-nav{
-	background-color:var(--color2);
-	width:100%;
-}
-
-.nav_li{
-	background-color:var(--color1);
-	
-	width:17%;
-	height:40px;
-	
-	vertical-align:middle;
-	text-align:center;
-	
-	display:inline-block;
-}
-
-.img_logo{
-	width:100%;
-	
-}
-p.nav_logo{
-
-	display:inline-block;
-	
-	width:15%;
-	background-color:black;
-}
-
-/*-- SECCIONES DEL MAIN . HTML --*/
-
-section.sec_1{
-	text-align:center;
-	
-	height:auto;
-	padding-top:140px;
-	padding-bottom:140px;
-	
-}
-
-.sec_1 h1{
-	font-size:35pt;
-	
-	margin-bottom:40px;
-
-}
-
-.sec_1 button{
-	width:120px;
-	height:40px;
-	
-}
-
-section.sec_2{
-	text-align:center;
-	background-color:var(--color6);
-	
-	padding-top:150px;
-}
-img.img_sec{
-	width:19%;
-	
-	display:inline-block;
-}
-.contenedor_texto{
-	width:60%;
-	
-	background-color:black;
-	
-	display:inline-block;
-}
-.sec_2 h2{
-	
-}
-
-.sec_2 p{
-	width:200px;
-	text-align:left;
-	
-	font-size:15pt;
-	
-	
-	margin-bottom:150px;
-}
+/*-- ETIQUETAS HTML --*/
+nav{  }
+	.logo{
+		width:120px;
+	}
+section{  }
+aside{  }
+div{  }
+span{  }
