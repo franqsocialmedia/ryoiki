@@ -58,10 +58,10 @@ alert("ESE YA FUE ELEGIDO. ELIJA OTRO POR FAVOR");
 			document.getElementById('jugador').value = 0;
 				console.log("Cambio de jugador: O");
 		//turno del 0
-		}else{
-			puntajes[cuadro] = turno;
+		}else if(turno == 0){
+			puntajes[num] = turno;
 			
-				console.log("Si revisa O");
+			console.log("Si revisa O");
 			if(turno == puntajes[1] && turno == puntajes[2] && turno == puntajes[3]){
 				
 			}else if(turno == puntajes[4] && turno == puntajes[5] && turno == puntajes[6]){
@@ -92,7 +92,7 @@ alert("ESE YA FUE ELEGIDO. ELIJA OTRO POR FAVOR");
 			x = 1;
 			document.getElementById('jugador').innerHTML = "X";
 			document.getElementById('jugador').value = 1;
-				console.log("Cambio de jugador: X");
+			console.log("Cambio de jugador: X");
 		}
 	}
 	console.log(cuadro);
