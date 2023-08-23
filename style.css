@@ -1,15 +1,20 @@
+/*-- LINK: Google Fonts --*/
+@import url('https://fonts.googleapis.com/css2?family=Anton&display=swap');
+
 /*-- GENERAL --*/
 html{
-
+	scroll-behavior:smooth;
 }
 
 *{
-
+	padding:0;
+	margin:0;
+	/*border:solid 1px red;*/
 }
 
 /*-- VARIABLES --*/
 :root{
-	--c1:red;
+	--c1:black;
 }
 
 /*-- ANIMACION --*/
@@ -20,22 +25,415 @@ html{
 }
 
 /*-- ESTRUCTURA HTML --*/
-body{ color:var(--c1); background-color:white;}
-header{  }
-main{  }
-footer{  }
+	body{ 
+		font-family:Anton, Roboto, sans-serif;
+		
+		line-height:1.8;
+		
+		background:url("IMG/purpura.jpg");
+		background-size:cover;
+		background-repeat:no-repeat;
+		background-position:center;
+		background-attachment:fixed;
+	}
+	header{ 
+		
+		/*padding-right:10%;*/
+		padding-top:20px;
+		padding-bottom:15px;
+		
+		display:flex;
+		flex-direction:row;
+		
+		
+		justify-content:center;
+		/*justify-content:space-between;*/
+		text-align:center;
+		align-items:flex-start;
+		
+		position:fixed;
+		top:0;
+		left:0;
+		
+		width:100vw;
+		height:10vh;
+		background-color:var(--c1);
+		
+		
+	}
+	nav{
+		display:none;
+	}
+	.menu{
+		display:flex;
+		
+		position:fixed;
+		top:calc(10% + 35px);
+		right:12%;
+		
+		width:80vw;
+		height:auto;
+		
+		flex-direction:column;
+		justify-content:space-start;
+		
+		letter-spacing:2px;
+		
+		background-image:linear-gradient(to bottom, black, red);
+		
+		z-index:1;
+	}
+	div#cover{
+		background-color:black;
+		opacity:0%;
+		
+		width:100vw;
+		height:100vh;
+		
+		position:fixed;
+		top:0;
+		left:0;
+		
+		z-index:0;
+		
+	}
+	main{ 
+		width:80vw;
+		margin:auto;
+		
+		padding-top:12vh;
+		padding-bottom:30px;
+		
+	}
+	section{
+		background-color:white;
+		
+		padding:30px 40px;
+	}
+	
+	section p{
+		margin-bottom:30px;
+	}
+	#sect_sinopsis{
+		
+		background-color:black;
+		
+		color:white;
+		
+	}
+	#sect_itadori{
+		
+		background-color:#e30052 ;
+		
+		color:white;
+		
+	}
+	#sect_megumi{
+		
+		background-color:#000328;
+		
+		color:white;
+		
+	}
+	#sect_nobara{
+		
+		background-color:#FD5602;
+		
+		color:white;
+		
+	}
+	#sect_goyo{
+		
+		background-image: radial-gradient(#2a9df4,white);
+		
+		color:black;
+		
+	}
+	footer{ 
+		background-color:var(--c1);
+		color:white;
+		
+		display:flex;
+		flex-direction:column;
+		
+		text-align:center;
+		align-items:center;
+		justify-content:center;
+		
+		width:100vw;
+		height:150px;
+		
+		padding-bottom:30px;
+		padding-top:30px;
+	}
+	
+	footer p{
+		margin-bottom:30px;
+		
+		font-size:0.8em;
+		
+	}
+	#redes{
+		width:60%;
+		display:flex;
+		flex-direction:row;
+		justify-content:space-around;
+		
+	}
+	.icon_redes{
+		width:17%;
+	}
 
 /*-- CODIGO ESPECIFICO --*/
-p{  }
-a{  }
-h1{  }
-h2{  }
-h3{  }
-spam{  }
-
-/*-- RESPONSIVE --*/
-@media screen and(max-width:770px){
-	body{
-		background-color:black;
+	#logo{
+		width:30vw;
+		/*width:30vw;*/
 	}
+	#btn_menu{
+		display:block;
+	
+		width:10%;
+		height:auto;
+		
+		position:fixed;
+		right:1%;
+	}
+	#img_menu{
+		width:100%;
+		height:auto;
+	}
+	
+	.link_menu{
+		padding:40px 30px;
+		font-size:1.7em;
+		color:white;
+	}
+	
+	.link_menu:hover{
+		background-color:purple;
+		color:white;
+	}
+	p{ 
+		font-family:Roboto, sans-serif;
+		font-size:1.1em;
+	 }
+	a{ 
+		text-decoration:none;
+		color:red;
+	}
+	h1{ 
+		font-family:Anton, Roboto, sans-serif;
+		font-size:2.8em;
+		
+		margin-bottom:10px;
+		text-align:center;
+		
+		color:red;
+		
+		text-transform:uppercase;
+		letter-spacing:1.6px;
+	}
+	h2{ 
+		font-family:Anton, Roboto, sans-serif;
+		font-size:1.3em;
+		
+		margin-bottom:10px;
+		
+		text-transform:uppercase;
+		letter-spacing:1.6px;
+	 }
+	h3{ 
+		font-family:Anton, Roboto, sans-serif;
+		letter-spacing:1.6px;
+	 }
+	spam{  }
+
+/*-- RESPONSIVE: MEDIA QUERY --*/
+@media screen and (min-width:770px){
+	
+	body{ 
+		font-family:Anton, Roboto, sans-serif;
+		color:var(--c1); background-color:white;
+		
+		line-height:1.8;
+		
+		background:url("IMG/sukuna.jpg");
+		background-size:cover;
+		background-repeat:repeat;
+		background-position:-540px;
+		background-attachment:fixed;
+	}
+	header{ 
+		
+		padding-top:20px;
+		padding-bottom:15px;
+		
+		display:flex;
+		flex-direction:row;
+		
+		justify-content:space-around;
+		text-align:center;
+		align-items:flex-end;
+		
+		position:fixed;
+		top:0;
+		left:0;
+		
+		width:100%;
+		height:10vh;
+		background-color:var(--c1);
+		
+		padding-left:40px;
+		padding-right:40px;
+		
+	}
+	
+	nav{
+		display:block;
+	}
+	
+	.menu{
+		display:block;
+		
+		position:relative;
+		background-color:black;
+		
+		top:0;
+		right:0;
+		
+		width:auto;
+		height:auto;
+		
+		flex-direction:row;
+		justify-content:inherit;
+		
+		letter-spacing:2px;
+		
+	}
+	main{ 
+		width:80vw;
+		margin:auto;
+		
+		padding-top:12vh;
+		padding-bottom:30px;
+		
+	}
+	section{
+		background-color:white;
+		
+		padding:30px 40px;
+	}
+	
+	section p{
+		margin-bottom:30px;
+	}
+	section#sinopsis{
+		
+		
+	}
+	footer{ 
+		background-color:var(--c1);
+		color:white;
+		
+		display:flex;
+		flex-direction:row;
+		
+		text-align:center;
+		align-items:center;
+		justify-content:center;
+		vertical-align:middle;
+		
+		width:100vw;
+		height:150px;
+		
+		padding-bottom:30px;
+		padding-top:30px;
+	}
+	
+	footer p{
+		
+		font-size:1em;
+		
+		margin:0;
+		
+	}
+	#redes{
+		width:50%;
+		
+		
+		display:flex;
+		flex-direction:row;
+		
+		justify-content:space-evenly;
+		align-text:right;
+		
+	}
+	.icon_redes{
+		width:10%;
+	}
+
+/*-- CODIGO ESPECIFICO --*/
+	#logo{
+		width:20vw;
+	}
+	#btn_menu{
+		display:none;
+	
+		width:10%;
+		height:auto;
+		
+		position:fixed;
+		right:1%;
+	}
+	#img_menu{
+		display:block;
+		
+		width:100%;
+		height:auto;
+	}
+	
+	.link_menu{
+		padding:0px 30px;
+		font-size:1.5em;
+		color:white;
+	}
+	
+	.link_menu:hover{
+		background-color:purple;
+		color:white;
+	}
+	p{ 
+		font-family:Roboto, sans-serif;
+		font-size:1.1em;
+	 }
+	a{ 
+		text-decoration:none;
+		color:red;
+	}
+	h1{ 
+		font-family:Anton, Roboto, sans-serif;
+		font-size:2.8em;
+		
+		margin-bottom:10px;
+		text-align:center;
+		
+		color:red;
+		
+		text-transform:uppercase;
+		letter-spacing:1.6px;
+	}
+	h2{ 
+		font-family:Anton, Roboto, sans-serif;
+		font-size:1.3em;
+		
+		margin-bottom:10px;
+		
+		text-transform:uppercase;
+		letter-spacing:1.6px;
+	 }
+	h3{ 
+		font-family:Anton, Roboto, sans-serif;
+		letter-spacing:1.6px;
+	 }
+	spam{  }
 }
