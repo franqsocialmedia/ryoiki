@@ -4,7 +4,7 @@ var cover = document.getElementById("cover");
 function OpenCloseMenu(){
 	
 	opciones.classList.toggle("menu");
-	cover.opacity = 100%;
+	cover.classList.toggle("cover_off");
 	
 	console.log("dentro de funcion");
 	

@@ -59,7 +59,7 @@ html{
 		height:10vh;
 		background-color:var(--c1);
 		
-		
+		z-index:1;
 	}
 	nav{
 		display:none;
@@ -81,11 +81,11 @@ html{
 		
 		background-image:linear-gradient(to bottom, black, red);
 		
-		z-index:1;
+		z-index:2;
 	}
 	div#cover{
 		background-color:black;
-		opacity:0%;
+		opacity:50%;
 		
 		width:100vw;
 		height:100vh;
@@ -94,8 +94,10 @@ html{
 		top:0;
 		left:0;
 		
-		z-index:0;
-		
+		z-index:1;	
+	}
+	.cover_off{
+		display:none;
 	}
 	main{ 
 		width:80vw;
@@ -108,7 +110,9 @@ html{
 	section{
 		background-color:white;
 		
-		padding:30px 40px;
+		padding:110px 40px;
+		
+		z-index:0;
 	}
 	
 	section p{
@@ -120,34 +124,84 @@ html{
 		
 		color:white;
 		
+		padding:90px 40px;
+		
 	}
+	
+	#titulo{
+		padding:40px 40px;
+	}
+	
 	#sect_itadori{
 		
-		background-color:#e30052 ;
+		background-color:#e30052;
+		background:url("IMG/itadori.gif");
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:center;
+		background-attachment:fixed;
 		
 		color:white;
-		
 	}
+	#sect_itadori section{
+		background-color:#e30052;
+		opacity:90%;
+	}
+	
+	
 	#sect_megumi{
 		
 		background-color:#000328;
 		
+		background:url("IMG/megumi.gif");
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:center;
+		background-attachment:fixed;
+		
 		color:white;
 		
+	}
+	#sect_megumi section{
+		background-color:#000328;
+		opacity:90%;
 	}
 	#sect_nobara{
 		
 		background-color:#FD5602;
 		
+		background:url("IMG/nobara.gif");
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:center;
+		background-attachment:fixed;
+		
 		color:white;
 		
 	}
+	#sect_nobara section{
+		
+		background-color:#FD5602;
+		opacity:90%;
+	}
+	
 	#sect_goyo{
 		
 		background-image: radial-gradient(#2a9df4,white);
 		
+		background:url("IMG/goyo.gif");
+		background-repeat:no-repeat;
+		background-size:cover;
+		background-position:center;
+		background-attachment:fixed;
+		
 		color:black;
 		
+	}
+	#sect_goyo section{
+		background-image: radial-gradient(#2a9df4,white);
+		
+		opacity:90%;
 	}
 	footer{ 
 		background-color:var(--c1);
@@ -197,10 +251,14 @@ html{
 		
 		position:fixed;
 		right:1%;
+		
+		z-index:3;
 	}
 	#img_menu{
 		width:100%;
 		height:auto;
+		
+		z-index:3;
 	}
 	
 	.link_menu{
@@ -217,9 +275,8 @@ html{
 		font-family:Roboto, sans-serif;
 		font-size:1.1em;
 	 }
-	a{ 
+	nav a{ 
 		text-decoration:none;
-		color:red;
 	}
 	h1{ 
 		font-family:Anton, Roboto, sans-serif;
@@ -236,6 +293,8 @@ html{
 	h2{ 
 		font-family:Anton, Roboto, sans-serif;
 		font-size:1.3em;
+		
+		color:white;
 		
 		margin-bottom:10px;
 		
@@ -286,6 +345,7 @@ html{
 		padding-left:40px;
 		padding-right:40px;
 		
+		z-index:1;
 	}
 	
 	nav{
@@ -321,7 +381,7 @@ html{
 	section{
 		background-color:white;
 		
-		padding:30px 40px;
+		padding:80px 40px;
 	}
 	
 	section p{
@@ -374,7 +434,7 @@ html{
 
 /*-- CODIGO ESPECIFICO --*/
 	#logo{
-		width:20vw;
+		width:17vw;
 	}
 	#btn_menu{
 		display:none;
@@ -395,7 +455,7 @@ html{
 	.link_menu{
 		padding:0px 30px;
 		font-size:1.5em;
-		color:white;
+		color:red;
 	}
 	
 	.link_menu:hover{
@@ -406,9 +466,8 @@ html{
 		font-family:Roboto, sans-serif;
 		font-size:1.1em;
 	 }
-	a{ 
+	nav a{ 
 		text-decoration:none;
-		color:red;
 	}
 	h1{ 
 		font-family:Anton, Roboto, sans-serif;
@@ -425,6 +484,8 @@ html{
 	h2{ 
 		font-family:Anton, Roboto, sans-serif;
 		font-size:1.3em;
+				
+		color:white;
 		
 		margin-bottom:10px;
 		
