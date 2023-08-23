@@ -20,7 +20,7 @@ html{
 }
 
 /*-- ESTRUCTURA HTML --*/
-body{ color:var(--c1); }
+body{ color:var(--c1); background-color:white;}
 header{  }
 main{  }
 footer{  }
@@ -34,7 +34,7 @@ h3{  }
 spam{  }
 
 /*-- RESPONSIVE --*/
-@media screen and(min-width:770px;){
+@media screen and(max-width:770px){
 	body{
 		background-color:black;
 	}
