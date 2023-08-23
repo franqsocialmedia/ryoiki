@@ -4,12 +4,15 @@
 /*-- GENERAL --*/
 html{
 	scroll-behavior:smooth;
+	
+	min-width:380px;
+	max-width:1020px;
 }
 
 *{
 	padding:0;
 	margin:0;
-	/*border:solid 1px red;*/
+	border:solid 1px red;
 }
 
 /*-- VARIABLES --*/
@@ -24,9 +27,23 @@ html{
 	100%{color:var(--c1)}
 }
 
+@keyframes hi{
+	0%{opacity:0%; left:-170px;}
+	40%{opacity:100%; left:-70px;}
+	60%{opacity:100%; left:-70px;}
+	100%{opacity:0%; left:-170px;}
+}
+
+@keyframes adios{
+	0%{opacity:100%; left:-70px;}
+	100%(opacity:0%; left:170px;)
+}
+
 /*-- ESTRUCTURA HTML --*/
 	body{ 
 		font-family:Anton, Roboto, sans-serif;
+		
+		width:100vw;
 		
 		line-height:1.8;
 		
@@ -147,6 +164,9 @@ html{
 		background-color:#e30052;
 		opacity:90%;
 	}
+	#sect_itadori .perfil{
+		padding-right:100vw;
+	}
 	
 	
 	#sect_megumi{
@@ -203,6 +223,34 @@ html{
 		
 		opacity:90%;
 	}
+	img.perfil{
+		height:100vh;
+		
+		padding-right:100%;
+		
+		opacity:0%;
+		
+		position:absolute;
+		left:-170;
+		
+		transition:0.6s ease-out;
+		
+	}
+	
+	img.perfil:hover{
+		
+		/*animation:hi 2s ease;*/
+		
+		opacity:100%;
+		left:-70;
+	}
+	
+	img.perfil_off{
+		animation:adios 2s ease;
+		
+		opacity:0%;
+		left:-170;
+	}
 	footer{ 
 		background-color:var(--c1);
 		color:white;
@@ -250,7 +298,8 @@ html{
 		height:auto;
 		
 		position:fixed;
-		right:1%;
+		right:0%;
+		top:0;
 		
 		z-index:3;
 	}
@@ -389,6 +438,9 @@ html{
 	}
 	section#sinopsis{
 		
+		
+	}
+	img.perfil{
 		
 	}
 	footer{ 
