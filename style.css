@@ -28,10 +28,8 @@ html{
 *{
 	padding:0;
 	margin:0;
-}
-
-img:hover{
-	background-image:url(ASSETS/);
+	
+	border:solid 1px red;
 }
 
 body{
@@ -40,12 +38,162 @@ body{
 }
 
 /*-- ESTRUCTURA DE LA PAGINA --*/
-head{
-
+header{
 }
+
+div#logotipo{
+	background-color:var(--c2);
+
+	display:flex;
+	
+	flex-direction:row;
+	
+	align-items:center;
+	justify-content:center;
+	
+	padding-right:70px;
+	padding-top:10px;
+	padding-bottom:10px;
+}
+#logotipo b{
+	font-size:1.5em;
+	
+	color:var(--c1);
+}
+
+div#sesion{
+	display:flex;
+	
+	flex-direction:row;
+	
+	justify-content:center;
+	
+	padding:20px 0px;
+}
+
+a{
+	text-decoration:none;
+	
+	color:var(--c2);
+}
+
+a.link_login{
+	padding-top:5px;
+	padding-right:30px;
+}
+
+button#registrarse{
+	min-width:120px;
+	min-height:30px;
+	
+	background-color:var(--c2);
+	
+	color:var(--c1);
+	font-weight:700;
+	
+	text-transform:uppercase;
+	
+	border-radius:8px 8px;
+}
+
+img#btn_quick{
+	max-width:40px;
+	
+	position:fixed;
+	right:0;
+	bottom:30vh;
+}
+
+nav{
+	display:none;
+}
+
 main{
-
+	height:auto;
+	
 }
+
+section{
+	height:50vh;
+	width:70vw;
+	
+	margin-left:15%;
+	
+	padding-top:20px;
+	
+	display:block;
+}
+
+h1{
+	font-weight:700;
+	font-size:2.3em;
+	
+	line-height:1.2;
+	
+	margin-bottom:20px;
+}
+
+div#buscador_Go{
+	display:flex;
+	
+	justify-content:center;
+	
+	
+	padding-bottom:30px;
+}
+
+input#buscador{
+	height:50px;
+	min-width:120px;
+	
+	text-align:center;
+	border:solid 2px var(--c2);
+}
+
+button#btn_go{
+	
+	height:50px;
+	min-width:90px;
+
+	
+	background-color:var(--c2);
+	border:solid 2px var(--c2);
+	
+	color:var(--c1);
+	font-weight:500;
+}
+
+div#eleccion{
+	display:grid;
+	
+	grid:auto auto auto;
+	
+	justify-content:center;
+	align-items:center;
+}
+
+img#logo{
+	max-width:80px;	
+}
+img.img_pkm{
+	width:90%;
+	
+	margin:auto;
+	margin-top:5px;
+	margin-bottom:5px;
+	
+	content:url("ASSETS/IMG/1x/choose-8.png");
+}
+img#fuego:hover{
+	content:url("ASSETS/IMG/1x/fuego-8.png");
+}
+img#agua:hover{
+	content:url("ASSETS/IMG/1x/agua-8.png");
+}
+img#planta:hover{
+	content:url("ASSETS/IMG/1x/planta-8.png");
+}
+
 footer{
 
 }
