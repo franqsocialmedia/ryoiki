@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="es">
 	
 	<head>
@@ -7,7 +8,7 @@
 		
 		<script src="JAVASCRIPT/script.js"></script>
 		
-		<link rel="shortcut icon" href="ASSETS/ICON/icon-8.png">
+		<link rel="shortcut icon" href="ASSETS/IMG/icon.png">
 		<link rel="stylesheet" href="style.css">
 		
 		<meta name="author" content="Yan-Yan">
@@ -24,7 +25,7 @@
 			
 			<div id="logotipo">
 			<a name="menu"></a>
-			<img src="ASSETS/IMG/1x/logo-SQ.gif" id="logo">
+			<img src="ASSETS/IMG/logo-SQ.gif" id="logo">
 			<b>
 			POKEPAGE-G
 			</b>
@@ -47,7 +48,7 @@
 		<main>		
 		
 		<!-- Boton para subir al menu -->
-		<a href="#menu"><img src="ASSETS/ICON/up-8.png" id="btn_quick"></a>
+		<a href="#menu"><img src="ASSETS/IMG/up.png" id="btn_quick"></a>
 		
 		<!--Seccion de imagenes-->
 			<section>
@@ -64,13 +65,12 @@
 			</div>
 			
 			<div id="eleccion">
-			<img src="ASSETS/IMG/1x/fuego-8.png" class="img_pkm" id="fuego">
-			<img src="ASSETS/IMG/1x/agua-8.png" class="img_pkm" id="agua">
-			<img src="ASSETS/IMG/1x/planta-8.png" class="img_pkm" id="planta">
+			<img src="ASSETS/IMG/fuego.png" class="img_pkm" id="fuego">
+			<img src="ASSETS/IMG/agua.png" class="img_pkm" id="agua">
+			<img src="ASSETS/IMG/planta.png" class="img_pkm" id="planta">
 			</div>
 			</section>
 			
-			<br>
 			
 			<section>
 			<h3>
@@ -119,11 +119,14 @@
 			</section>
 			
 			<section>
-			<media src="ASSETS/VIDEO/generaciones_480p.mp4" class="video-pk"></media>
+			<video class="video-pk" autoplay muted controls>
+			<source src="ASSETS/VIDEO/generaciones_480p.mp4" type="video/mp4">
+			<source src="ASSETS/VIDEO/generaciones_1080p.mp4" type="video/mp4">
+			</video>
 			
 			<div id="puntuacion">
 			<div>
-			<img src="ASSETS/IMG/1x/snorlax_1.png" class="img_snlax">
+			
 			<p>
 			<b>
 			Evocador
@@ -134,7 +137,7 @@
 			</div>
 			
 			<div>
-			<img src="ASSETS/IMG/1x/snorlax_2.png" class="img_snlax">
+			
 			<p>
 			<b>
 			Emocionante
@@ -145,7 +148,7 @@
 			</div>
 			
 			<div>
-			<img src="ASSETS/IMG/1x/snorlax_3.png" class="img_snlax">
+			
 			<p>
 			<b>
 			Inspirador
@@ -160,20 +163,26 @@
 			</section>
 			
 		<!-- Seccion de comentarios -->
-			<section>
 			
-			<h3>
+			<h3 style="margin-top:30px;">
 			Que opinan sus personajes?
 			</h3>
 			
+			<section id="ultimo">
+			
+			
 			<div id="comentarios">
+			
+			<a href="index.html" class="new_comentario"><b>
+			<
+			</b></a>
 			
 			<div class="div_comentario">
 			<p>
 			Blablablablalbbalbalblalbalbalkabalablablablbalaba. blabalbalablbal.
 			</p>
 			<div>
-			<img src="ASSETS/IMG/1x/personaje1-8.png" class="img_personaje">
+			<img src="ASSETS/IMG/personaje1.png" class="img_personaje">
 			<p>
 			<b>
 			Nombre
@@ -181,10 +190,13 @@
 			<br>
 			Poke-entrenador
 			</p>
-			<div>
 			</div>
 			
-			</div>
+			
+			<a href="index.html" class="new_comentario"><b>
+			>
+			</b></a>
+			
 			</section>
 		</main>
 		
