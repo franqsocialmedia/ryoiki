@@ -275,21 +275,31 @@ section#ultimo{
 	height:auto;
 	
 	margin:0;
+	margin-bottom:20px;
 	color:var(--c1);
 	
+	padding-bottom:20px;
+	
+}
+
+div#comentarios{
 	display:flex;
 	flex-direction:row;
+	
+	justify-content:center;
+	align-items:center;
 }
 
 a.new_comentario{
 	height:100%;
-	padding-left:2vw;
-	padding-right:2vw;
+	padding:100px 2vw;
 }
 
 .div_comentario{
 	width:40vw;
 	height:50vw;
+	
+	margin:0 1%;
 	
 	background-color:var(--c1);
 	color:var(--c2);
@@ -299,19 +309,53 @@ a.new_comentario{
 	display:flex;
 	flex-direction:column;
 	
+	
 }
 
+.div_comentario div{
+	margin:0px 0px 0px 0px;
+}
 .div_comentario p{
-	width:50px;
+	font-size:0.9em;
+	width:90%;
+	
+	text-align:left;
+	
+	margin-top:5%;
+	margin-left:5%;
 }
 
 img.img_personaje{
 	width:15vw;
+	
+	margin-left:5%;
+	margin-bottom:0%;
 }
 
+.img_personaje p{
+	margin:0;
+}
 
 footer{
+	background-color:var(--c2);
+	color:var(--c1);
+	
+	width:100vw;
+	
+	padding-top:20px;
+	
+	text-align:center;
+}
 
+a.link_footer{
+	color:var(--c1);
+}
+
+.div_footer{
+	padding-bottom:20px;
+	
+	display:flex;
+	flex-direction:column;
 }
 
 /*-------------------------------------------------*/
