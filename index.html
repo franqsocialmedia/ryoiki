@@ -6,7 +6,7 @@
 			POKE-PAGE
 		</title>
 		
-		<script src="JAVASCRIPT/script.js"></script>
+		<script src="JAVASCRIPT/script.js" defer></script>
 		
 		<link rel="shortcut icon" href="ASSETS/IMG/icon.png">
 		<link rel="stylesheet" href="style.css">
@@ -24,19 +24,23 @@
 		<header>
 			
 			<div id="logotipo">
-			<a name="menu"></a>
 			<img src="ASSETS/IMG/logo-SQ.gif" id="logo">
 			<b>
 			POKEPAGE-G
 			</b>
+			<img src="ASSETS/IMG/menu.png" id="sandwich" onclick="menu()">
 			</div>
-			<nav>
+			
+			<nav class="menu_pop">
 			<a href="#" class="link_menu">Link-1</a>
 			<a href="#" class="link_menu">Link-1</a>
 			<a href="#" class="link_menu">Link-1</a>
 			</nav>
 			
+			<a name="menu"></a>
+			
 			<div id="sesion">
+			
 			<a href="#" class="link_login">Login</a>
 			<button id="registrarse">
 			Registrarse
@@ -52,6 +56,7 @@
 		
 		<!--Seccion de imagenes-->
 			<section>
+			<img src="ASSETS/IMG/team.png" id="img_entrenador">
 			
 			<h1>
 			Aprende. Atrapa. Evoluciona.
@@ -78,13 +83,17 @@
 			</h3>
 			</section>
 			
-			<section>
+			<section id="grupo_tipo">
 			<div id="tipos">
 			<a href="#" class="link_tipos">Basicos</a>
 			<a href="#" class="link_tipos">Bosque</a>
 			<a href="#" class="link_tipos">Arenoso</a>
 			<a href="#" class="link_tipos">Ciudad</a>
 			<a href="#" class="link_tipos">Leyenda</a>
+			</div>
+			
+			<div id="grupo_tipos">
+			<img src="ASSETS/IMG/basicos.png" class="img_tipos">
 			</div>
 			
 			</section>
@@ -258,10 +267,11 @@
 			
 			
 			<div id="redes">
-			<img src="" class="link_redes">
-			<img src="" class="link_redes">
-			<img src="" class="link_redes">
+			<a href="index.html"><img src="ASSETS/ICON/icon_fb.png" class="link_redes"></a>
+			<a href="index.html"><img src="ASSETS/ICON/icon_ig.png" class="link_redes"></a>
+			<a href="index.html"><img src="ASSETS/ICON/icon_ws.png" class="link_redes"></a>
 			</div>
+			
 			<p>
 			Poke-Page 2023 &copy; Yan-Yan. <br> All Rights Reserved.
 			</p>
