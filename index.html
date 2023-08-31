@@ -128,12 +128,14 @@
 			</section>
 			
 			<section>
-			<video class="video-pk" autoplay muted controls>
+			<video class="video-pk" paused muted controls id="pkmVideo" onPlay="conteoPlay('view')">
 			<source src="ASSETS/VIDEO/generaciones_480p.mp4" type="video/mp4">
 			<source src="ASSETS/VIDEO/generaciones_1080p.mp4" type="video/mp4">
 			</video>
 			
-			<div id="puntuacion">
+			<img src="ASSETS/IMG/like.png" class="btn_like" onClick="conteoPlay('like')">
+			
+			<div id="puntuacion" onclick="conteoPlay()">
 			<div>
 			
 			<p>

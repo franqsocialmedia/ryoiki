@@ -18,6 +18,11 @@
 	100%{color:var(--c3);}
 }
 
+@keyframes like{
+	0%{transform:scale(100%,100%)}
+	40%{transform:scale(140%,140%)}
+	100%{transform:scale(35px,35px)}
+}
 
 /*-- CODIGO GENERAL --*/
 html{
@@ -120,7 +125,7 @@ img#sandwich{
 	right:3vh;
 	top:5vh;
 	
-	width:10vw;
+	width:6vw;
 	
 	filter:brightness(190%);
 	filter:invert(70%);
@@ -367,6 +372,19 @@ video.video-pk{
 	
 }
 
+.btn_like{
+	width:35px;
+	
+	position:relative;
+	left:85%;
+}
+
+.btn_like:hover{
+	transform:scale(100%,100%);
+	
+	animation:like 1s ease;
+}
+
 div#puntuacion{
 	margin-top:20px;
 }
@@ -400,6 +418,9 @@ a.new_comentario{
 }
 
 .div_comentario{
+	position:relative;
+	right:0;
+	
 	width:40vw;
 	height:50vw;
 	
@@ -415,6 +436,16 @@ a.new_comentario{
 	
 	color:var(--c3);
 	
+	transition:right 1s ease;
+}
+
+.siguienteComentario{
+	position:relative;
+	right:300px;
+}
+.esperaComentario{
+	position:relative;
+	right:40vw;
 }
 
 .div_comentario div{
