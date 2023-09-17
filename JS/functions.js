@@ -1,5 +1,7 @@
-function hi(){
+function menu_lateral(){
 
-console.log("Hi-Hi");
+console.log("MENU LATERAL");
+
+var activo = document.querySelector('.nav_menu').classList.toggle("activo");
 
 }

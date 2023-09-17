@@ -14,8 +14,10 @@
 		
 		
 		<link rel="stylesheet" href="CSS/style_variables.css">
+		<link rel="stylesheet" href="CSS/style_animation.css">
 		<link rel="stylesheet" href="CSS/style_structure.css">
-		<link rel="stylesheet" href="CSS/style_selectors.css">
+		<link rel="stylesheet" href="CSS/style_PC.css">
+		<link rel="stylesheet" href="CSS/style_device.css">
 		
 		<link rel="shortcut icon " href="IMG/icon.png">
 		
@@ -26,10 +28,10 @@
 	<body>
 		<header>
 			<div>
-			<img src="IMG/no-found.png" onclick="hi()">
+			<img src="IMG/no-found.png"  id="logo" onclick="hi()">
 			</div>
 			
-			<nav>
+			<nav class="nav_menu">
 				<div>
 				<a href="index.html" class="menu_link">LINK-1</a>
 				<a href="index.html" class="menu_link">LINK-2</a>
@@ -43,9 +45,9 @@
 				</div>
 			</nav>
 			
-			<button>
-				<img src="IMG/no-found.png">
-			</button>
+			<div id="btn_sandwich">
+			<img src="IMG/no-found.png" id="sandwich" onclick="menu_lateral()">
+			</div>
 		</header>
 		
 		<aside>
@@ -67,10 +69,10 @@
 				Why Lorem ipsum?
 				</h1>
 				
-				<button>Start free trial<button>
+				<button class="general">Start free trial</button>
 				</div>
 				
-				<img src="IMG/no-found.png">
+				<img src="IMG/no-found.png" id="principal" >
 			</section>
 			
 			<section id="section_options">
@@ -78,23 +80,49 @@
 				Section 2
 				</h2>
 				
-				<div>
-				<img src="IMG/no-found.png">
+				<div class="tarjetas">
+				<button class="btn_tarjeta">Clases</button>
+				<br>
+				<h3>
+				TITULO 3
+				</h3>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				
 				</div>
 				
-				<div>
-				<img src="IMG/no-found.png">
+				
+				<div class="tarjetas">
+				<button class="btn_tarjeta">Clases</button>
+				<br>
+				<h3>
+				TITULO 3
+				</h3>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				
 				</div>
 				
-				<div>
-				<img src="IMG/no-found.png">
+				
+				<div class="tarjetas">
+				<button class="btn_tarjeta">Clases</button>
+				<br>
+				<h3>
+				TITULO 3
+				</h3>
+				<p>
+				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+				</p>
+				
 				</div>
 			</section>
 			
 			<section  id="section_tema">
 				<div>
 				<h1>
-				TITULO 3
+				Media & History Combined
 				</h1>
 				</div>
 				
@@ -103,7 +131,7 @@
 				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
 				</p>
 					
-				<button>Read More</button>
+				<button class="btn_tema">Read More</button>
 				</div>
 			</section>
 			
@@ -112,18 +140,24 @@
 			Audio Libros
 			</h2>
 			
-			<div>
-				<img src="IMG/no-found.png">
+			<div class="seleccion">
+				<img src="IMG/no-found.png" class="arte" >
 				<h3>Nombre del texto</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
 			</div>
-			<div>
-				<img src="IMG/no-found.png">
+			
+			
+			
+			<div class="seleccion">
+				<img src="IMG/no-found.png" class="arte" >
 				<h3>Nombre del texto</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
 			</div>
-			<div>
-				<img src="IMG/no-found.png">
+			
+			
+			
+			<div class="seleccion">
+				<img src="IMG/no-found.png" class="arte" >
 				<h3>Nombre del texto</h3>
 				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
 			</div>

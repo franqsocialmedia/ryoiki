@@ -1,0 +1,23 @@
+
+/*header{
+	min-height:10vh;
+	
+	display:grid;
+	grid:auto / auto auto;
+	
+	align-items:center;
+}*/
+
+a{
+	text-decoration:none;
+}
+
+p{
+	margin-bottom:0px;
+	
+}
+
+span{
+	text-transform:uppercase;
+}
+

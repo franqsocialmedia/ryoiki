@@ -15,25 +15,80 @@ html{
 
 body{
 	background-color:var(--color1);
+	
+	width:100%;
 }
 
 header{
+	min-height:10vh;
+	width:100%;
 	
+	
+	position:fixed;
+	top:0;
+	z-index:10;
+	
+	background-color:var(--color2);
+}
+
+nav{
+	display:flex;
+	
+	flex-direction:column;
+	justify-content:space-evenly;
+	align-items:center;
+	
+	height:0vh;
+	width:100%;
+	
+	position:relative;
+	top:-7000px;
+	
+	opacity:0%;
+	
+	transition:opacity;
+	transition-duration:1.4s;
+	transition-delay:0.1s;
+	}
+nav.activo{
+	display:flex;
+	height:80vh;
+	top:0;
+	opacity:100%;
 }
 
 aside{
-
+	display:none;
+	width:60vw;
 }
 
 main{
+	margin-top:13vh;
+	
+	height:auto;
+	width:100%;
+}
 
+section{
+	min-height:50vh;
+	
+	padding:50px 20px;
+	
+	background-color:var(--color3);
 }
 
 footer{
-
+	height:15vh;
+	
+	text-align:center;
+	
+	padding-top:10%;
+	
+	font-weight:300;
+	font-size:0.8em;
 }
 
-img{
+img.new{
 	max-width:50px;
 	max-height:50px;
 	
