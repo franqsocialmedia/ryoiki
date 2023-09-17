@@ -1,0 +1,13 @@
+/*Variables de CSS*/
+
+:root {
+	--colorPrincipal:#E41B95;
+	--colorBase:#171A1F;
+	--colorBlanco:#F5F3F5;
+	--colorSecundario:#4CD2B0;
+	
+	--gris1:#8c8c8c;
+	--gris2:#666666;
+	--gris3:#454546;
+	--gris4:#272727;
+}

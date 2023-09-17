@@ -1,0 +1,18 @@
+.seccion_introduccion{
+	background-color:var(--gris1);
+}
+
+.seccion_trial{
+	background-color:var(--gris2);
+}
+
+.seccion_explicacion{
+	background-color:var(--gris1);
+}
+
+.seccion_guia{
+	background-color:var(--gris3);
+}
+
+h1{
+}

@@ -2,6 +2,7 @@
 
 <html>
 	<head>
+		<link rel="shortcut icon" href="ASSETS/IMG/icon.png">
 		<title>Historia del Arte</title>
 		
 		<meta name="author" content="Yan-Yan">
@@ -13,27 +14,95 @@
 		
 		<meta charset="UTF-8">
 		
-		<link rel="stylesheet" href="animaciones.css">
 		<link rel="stylesheet" href="variables.css">
 		<link rel="stylesheet" href="style_base.css">
+		<link rel="stylesheet" href="animaciones.css">
 		<link rel="stylesheet" href="style_estructura.css">
 		<link rel="stylesheet" href="style_pc.css">
-		<link rel="icon">
 		
-		<script src=""></script>
+		
+		<script src="selectors.js" defer></script>
+		<script src="funciones.js" defer></script>
 	</head>
 	
 	<body>
 		<header>
+		
+			<div>
+			<img src="aASSETS/IMG/logo.png" id="logo">
+			<b>HISTORIA DEL ARTE</b>
+			</div>
+			
+			<nav>
+			<a href="index.html" class="a_link">Link 1</a>
+			<a href="index.html" class="a_link">Link 2</a>
+			<a href="index.html" class="a_link">Link 3</a>
+			</nav>
+			
+			<img src="aASSETS/IMG/sandwich.png" id="hamburgesa">
+
 		</header>
 		
 		<main>
-			<section id="">
+		
+			<section id="seccion_introduccion">
+				<div>
+				<p>
+				Museo Virtual:
+				</p>
+				<h1>
+				Principios del Arte
+				</h1>
+				<input type="button" id="new_image" value="Inspiracion">
+				</div>
+				
+				<div>
+				<img src="aASSETS/IMG/arte.jpg" class="img_principal">
+				</div>
+			</section>
+			
+			<section id="seccion_trial">
+				<h2>Entiendes los estilos</h2>
+				<div id="seleccion">
+				
+				<div class="seleccion">
+				</div>
+				
+				<div class="seleccion">
+				</div>
+				
+				<div class="seleccion">
+				</div>
+				
+				</div>
+			</section>
+			
+			<section id="seccion_explicacion">
+				<div><h1>Combina las tecnicas</h1></div>
+				<div><img src="ASSETS/IMG/" class="img_fondo"></div>
 				<div></div>
 			</section>
+			
+			<section id="seccion_guia">
+				<h2>Guia de los generos</h2>
+				<div><img src="ASSETS/IMG/" class="lista_imagenes"></div>
+				<div>Gotico</div>
+				<div>En esta epoca los detalles y enfoque religioso eran signos de grandeza. Ademas de llevar a un siguiente plano el significado cristiano de las cosas.</div>
+				<div><img src="ASSETS/IMG/" class="btn_play"></div>
+			</section>
+			
 		</main>
 		
 		<footer>
+			
+			<hr style="width:90%; color:white; position:relative; left:5%;">
+			
+			<p>
+				Historia del Arte.
+				<br>
+				Yan-Yan &copy; Sept. 2023
+			</p>
+			
 		</footer>
 	</body>
 </html>
