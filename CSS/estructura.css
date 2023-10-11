@@ -12,16 +12,35 @@ html{
 }
 
 body{
-color:var(--color1);
+	background-color:var(--color4);
 }
 
 header{
-
+	min-height:20vh;
+	
+	background-color:var(--color3);
 }
 
 main{
+	width:100%;
+	min-height:50vh;
+	
+	background-color:var(--color2);
+}
 
+aside{
+	display:none;
+}
+
+section{
+	width:98%;
+	min-height:40vh;
+	
+	margin:5vw auto;
 }
 
 footer{
+	min-height:20vh;
+	
+	background-color:var(--color3);
 }

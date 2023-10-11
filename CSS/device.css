@@ -1,0 +1,17 @@
+/*ESTILO DE PAGINA EN DISPOSITIVOS MOVILES*/
+
+img#sandwich_btn{
+	position:fixed;
+	right:20px;
+	top:20px;
+
+	min-width:10vw;
+	min-height:10vw;
+	
+	/*content: url("IMG/no-found.png");*/
+}
+
+p{
+	font-size:5em;
+	color:red;
+	}

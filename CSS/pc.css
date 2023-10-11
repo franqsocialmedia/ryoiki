@@ -1,0 +1,8 @@
+/*ESTILO PARA PC y LAPTOP*/
+
+@media screen and (min-width:500px){
+	p{
+		color:blue;
+		font-size:2em;
+	}
+}
