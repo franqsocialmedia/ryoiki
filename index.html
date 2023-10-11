@@ -1,177 +1,75 @@
-<html>
+<!-- HTML DOCTYPE-->
+<html lang="es">
 	<head>
+		
+		<link rel="icon shortcut" href="IMG/iconPage.png">
+		
 		<title>
-			Arte Yan-Yan
+			PRACTICAS DOM. 3 DIAS!
 		</title>
 		
 		<meta name="author" content="Yan-Yan">
-		<meta name="description" content="pagina para expresar contenido del arte">
-		<meta name="keyword" content="arte, multimedia, edad media, genero, estilo">
-		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="keyword" content="DOM, Javascript, HTML, WebPage, Practica">
+		<meta name="description" content="Pagina para practicar: HTML, CCStyle, DOM Javascript con: Galeria, llegada de los elementos animados y cambiar la paleta de color segun la imagen elegida">
+		<meta name="viewport" content="width-device:width, initial-scale:1.0">
 		
-		<meta charset="UTF-8">
+		<meta name="charset" content="UTF-8">
 		<!--meta http-equiv="refresh" content="2"-->
 		
+		<link rel="stylesheet" href="CSS/variables.css">
+		<link rel="stylesheet" href="CSS/animaciones.css">
+		<link rel="stylesheet" href="CSS/estructura.css">
+		<link rel="stylesheet" href="CSS/pc.css">
+		<link rel="stylesheet" href="CSS/cell.css">
 		
-		<link rel="stylesheet" href="CSS/style_variables.css">
-		<link rel="stylesheet" href="CSS/style_animation.css">
-		<link rel="stylesheet" href="CSS/style_structure.css">
-		<link rel="stylesheet" href="CSS/style_PC.css">
-		<link rel="stylesheet" href="CSS/style_device.css">
+		<script src="JS/funciones.js" defer></script>
+		<script src="JS/script.js" defer></script>
 		
-		<link rel="shortcut icon " href="IMG/icon.png">
-		
-		<script src="JS/functions.js" defer></script>
-		<script src="JS/script1.js" defer></script>
 	</head>
 	
 	<body>
 		<header>
-			<div>
-			<img src="IMG/no-found.png"  id="logo" onclick="hi()">
-			</div>
+			<img src="IMG/sandwich.png" id="sandwich_btn">
 			
-			<nav class="nav_menu">
-				<div>
-				<a href="index.html" class="menu_link">LINK-1</a>
-				<a href="index.html" class="menu_link">LINK-2</a>
-				<a href="index.html" class="menu_link">LINK-3</a>
-				<a href="index.html" class="menu_link">LINK-4</a>
-				</div>
-				
-				<div>
-				<a href="index.html" class="login">Login</a>
-				<button>Sign up<button>
-				</div>
+			<nav>
+				<a href="index.html" class="link_a">LINK-1</a>
+				<a href="index.html" class="link_a">LINK-2</a>
+				<a href="index.html" class="link_a">LINK-3</a>
+				<a href="index.html" class="link_a">LINK-4</a>
 			</nav>
-			
-			<div id="btn_sandwich">
-			<img src="IMG/no-found.png" id="sandwich" onclick="menu_lateral()">
-			</div>
 		</header>
 		
 		<aside>
-			<ul>
-				<li><a href="index.html" class="aside_link">LINK-1</a></li>
-				<li><a href="index.html" class="aside_link">LINK-2</a></li>
-				<li><a href="index.html" class="aside_link">LINK-3</a></li>
-				<li><a href="index.html" class="aside_link">LINK-4</a></li>
-			</ul>
+			<section>
+				<a href="index.html" class="link_a">LINK-1</a>
+				<a href="index.html" class="link_a">LINK-2</a>
+				<a href="index.html" class="link_a">LINK-3</a>
+				<a href="index.html" class="link_a">LINK-4</a>
+			</section>
 		</aside>
 		
 		<main>
-			<section id="section_intro">
-				<div>
-				<span>
-				Museo Virtual
-				</span>
-				<h1>
-				Why Lorem ipsum?
-				</h1>
-				
-				<button class="general">Start free trial</button>
-				</div>
-				
-				<img src="IMG/no-found.png" id="principal" >
+			<section>
+			
 			</section>
 			
-			<section id="section_options">
-				<h2>
-				Section 2
-				</h2>
-				
-				<div class="tarjetas">
-				<button class="btn_tarjeta">Clases</button>
-				<br>
-				<h3>
-				TITULO 3
-				</h3>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				
-				</div>
-				
-				
-				<div class="tarjetas">
-				<button class="btn_tarjeta">Clases</button>
-				<br>
-				<h3>
-				TITULO 3
-				</h3>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				
-				</div>
-				
-				
-				<div class="tarjetas">
-				<button class="btn_tarjeta">Clases</button>
-				<br>
-				<h3>
-				TITULO 3
-				</h3>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-				
-				</div>
+			<section>
 			</section>
 			
-			<section  id="section_tema">
-				<div>
-				<h1>
-				Media & History Combined
-				</h1>
-				</div>
-				
-				<div>
-				<p>
-				Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
-				</p>
-					
-				<button class="btn_tema">Read More</button>
-				</div>
-			</section>
-			
-			<section  id="section_audio">
-			<h2>
-			Audio Libros
-			</h2>
-			
-			<div class="seleccion">
-				<img src="IMG/no-found.png" class="arte" >
-				<h3>Nombre del texto</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-			</div>
-			
-			
-			
-			<div class="seleccion">
-				<img src="IMG/no-found.png" class="arte" >
-				<h3>Nombre del texto</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-			</div>
-			
-			
-			
-			<div class="seleccion">
-				<img src="IMG/no-found.png" class="arte" >
-				<h3>Nombre del texto</h3>
-				<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</P>
-			</div>
+			<section>
 			</section>
 		</main>
 		
 		<footer>
-			<div>
-			<p>
-				Pagina del Arte.
-				<br>
-				Yan-Yan &copy; 2023
-			</p>
-			</div>
+			<section>
+				<div>
+					<img src="IMG/fb.png" class="redes">
+				</div>
+				
+				<p>
+					Pagina DOM &copy; Yan-Yan 2023.
+				</p>
+			</section>
 		</footer>
 	</body>
 </html>

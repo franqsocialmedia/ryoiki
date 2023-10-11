@@ -1,0 +1,27 @@
+/*ESTRUCTURA GENERAL*/
+
+html{
+	scroll-behavior:smooth;
+}
+
+*{
+	padding:0;
+	margin:0;
+	
+	border:1px solid red;
+}
+
+body{
+color:var(--color1);
+}
+
+header{
+
+}
+
+main{
+
+}
+
+footer{
+}

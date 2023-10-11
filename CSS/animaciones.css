@@ -1,0 +1,7 @@
+/*ANIMACION CSS*/
+
+@keyframes hi{
+	0%{color:black;}
+	50%{color:red;}
+	100%{color:black;};
+}
