@@ -28,13 +28,17 @@ main{
 	background-color:var(--color2);
 }
 
-aside{
-	display:none;
-}
-
-
 footer{
 	min-height:20vh;
 	
 	background-color:var(--color3);
+}
+
+img{
+	min-width:100px;
+	min-height:100px;
+	
+	background-image:url("../IMG/no-found.png");
+	background-position:center;
+	background-size:cover;
 }
