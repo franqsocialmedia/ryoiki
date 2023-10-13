@@ -52,13 +52,18 @@
 		</div>
 		
 		<main>
-			<section>
+			<section id="principal">
 				<h1>
 				Victory
 				</h1>
 				<h3>
 				First Strike
 				</h3>
+				
+				
+				
+				<div class="prueba">
+				</div>
 				
 				<div>
 					<a href="#" class="imagen_a">Imagen 1</a>
@@ -67,10 +72,10 @@
 					<a href="#" class="imagen_a">Imagen 4</a>
 				</div>
 				
-				<img class="personaje_img" src="../IMG/no-found.png">
+				
 			</section>
 			
-			<section>
+			<section id="calendario">
 				<div>
 				<h2>
 				First Strike Schedule
@@ -94,10 +99,15 @@
 				<hr style="width:80%; margin-left:10%;">
 			</section>
 			
-			<section>
-				<img src="../IMG/no-found.png" class="galeria_img">
-				<img src="../IMG/no-found.png" class="galeria_img">
-				<img src="../IMG/no-found.png" class="galeria_img">
+			<section id="galeria">
+				<img src="IMG/no-found.png" class="galeria_img" onclick="gallery_show()" id="imagen_galeria">
+				<img src="IMG/no-found.png" class="galeria_img" onclick="gallery_show()" id="imagen_galeria">
+				<img src="IMG/no-found.png" class="galeria_img" onclick="gallery_show()" id="imagen_galeria">
+				
+				<!--La siguiente imagen no aparece hasta elegir alguna de la Galeria-->
+				<img src="IMG/no-found.png" class="none">
+				<a class="none_btn" href="#">X</a>
+				<div class="cover_img_activo" id="fondo"></div>
 			</section>
 		</main>
 		

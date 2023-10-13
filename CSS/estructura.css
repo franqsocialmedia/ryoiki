@@ -2,6 +2,7 @@
 
 html{
 	scroll-behavior:smooth;
+	
 }
 
 *{
@@ -13,6 +14,10 @@ html{
 
 body{
 	background-color:var(--color4);
+	
+	font-family:gabarito, sans-serif;
+	font-weight:500;
+	font-size:1.2em;
 }
 
 header{
@@ -38,7 +43,7 @@ img{
 	min-width:100px;
 	min-height:100px;
 	
-	background-image:url("../IMG/no-found.png");
+	/*background-image:url("../IMG/no-found.png");*/
 	background-position:center;
 	background-size:cover;
 }
