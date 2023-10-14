@@ -9,39 +9,49 @@ html{
 	padding:0;
 	margin:0;
 	
-	border:1px solid red;
+	/*border:1px solid red;*/
 }
 
 body{
-	background-color:var(--color4);
+	/*background-color:var(--color4);*/
+	background-image:url("../IMG/black.jpg");
+	background-attachment:fixed;
+	background-size:cover;
+	background-position:center;
+	background-repeat:no-repeat;
 	
 	font-family:gabarito, sans-serif;
 	font-weight:500;
 	font-size:1.2em;
+	
+	color:var(--color3);
 }
 
 header{
 	min-height:20vh;
 	
-	background-color:var(--color3);
+	/*background-color:var(--color3);*/
+	background-image:url("../IMG/roja.jpg");
+	background-attachment:scroll;
+	background-position:center -15vh;
+	background-size:cover;
+	background-repeat:no-repeat;
 }
 
 main{
 	width:100%;
 	min-height:50vh;
 	
-	background-color:var(--color2);
+	/*background-color:var(--color2);*/
 }
 
 footer{
 	min-height:20vh;
 	
-	background-color:var(--color3);
+	background-color:var(--color4);
 }
 
 img{
-	min-width:100px;
-	min-height:100px;
 	
 	/*background-image:url("../IMG/no-found.png");*/
 	background-position:center;
