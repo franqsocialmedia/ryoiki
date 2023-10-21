@@ -5,11 +5,9 @@ function menuClick(){
 	var cover_activo = document.querySelector('.cover').classList.toggle('cover_activo');
 }
 
+var x = document.getElementById('galeria');
 
-function gallery_show(){
-	console.log("GALERIA");
-	
-	var img = document.getElementById('imagen_galeria').url;
-	
-	alert(img);
-}
+x.addEventListener ('click', (e) => {
+	console.log(x.target);
+})
+
