@@ -23,7 +23,6 @@
 		<link rel="stylesheet" href="CSS/device.css">
 		
 		<script src="JS/function.js" defer></script>
-		<script src="JS/script.js" defer></script>
 		
 	</head>
 	
@@ -98,14 +97,14 @@
 			</section>
 			
 			<section id="galeria">
-				<img src="IMG/p1.png" class="galeria_img" id="imagen_galeria">
-				<img src="IMG/p2.png" class="galeria_img" id="imagen_galeria">
-				<img src="IMG/p3.png" class="galeria_img" id="imagen_galeria">
+				<img src="IMG/p1.png" class="galeria_img" id="imagen_galeria" onclick="muestraIMG()">
+				<img src="IMG/p2.png" class="galeria_img" id="imagen_galeria" onclick="muestraIMG()">
+				<img src="IMG/p3.png" class="galeria_img" id="imagen_galeria" onclick="muestraIMG()">
 				
 				<!--La siguiente imagen no aparece hasta elegir alguna de la Galeria-->
-				<img src="IMG/no-found.png" class="none">
-				<a class="none_btn" href="#">X</a>
-				<div class="cover_img_activo" id="fondo"></div>
+				<img src="IMG/no-found.png" class="none NOviendo" id="none">
+				<a class="none_btn NOviendo" href="#" onclick="muestraIMG()" id="none">X</a>
+				<div class="cover_img_activo NOviendo" id="fondo"  onclick="muestraIMG()"></div>
 			</section>
 		</main>
 		

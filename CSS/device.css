@@ -237,14 +237,47 @@ img.galeria_img{
 }
 
 .none{
-	display:none;
+	display:block;
+	
+	position:fixed;
+	
+	top:30vh;
+	
+	width:80vw;
+	
+	opacity:1;
+	
+	z-index:3;
 }
 .none_btn{
-	display:none;
-}
+	display:block;
+	
+	font-size:2em;
+	text-decoration:none;
+	
+	color:white;
+	
+	position:fixed;
+	
+	top:31vh;
+	left:12vw;
+	
+	width:80vw;
+	
+	opacity:1;
+	
+	z-index:4;
+	}
 
 #fondo{
-	display:none;
+	display:block;
+	
+	
+	width:100%;
+	
+	opacity:0.7;
+	
+	z-index:2;
 }
 
 .imagen_activa{
@@ -271,6 +304,12 @@ img.galeria_img{
 	position:fixed;
 	top:0;
 	left:0;
+}
+
+.NOviendo{
+	left:2000;
+	
+	opacity:1;
 }
 
 #calendario{
