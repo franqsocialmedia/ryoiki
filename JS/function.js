@@ -1,3 +1,8 @@
-var x = document.cookie = "Prueba de Cookies";
+document.getElementById("prueba").addEventListener("click", prueba);
+let variable = "GG";
 
-console.log(x);
+
+function prueba(variable){
+	console.log("prueba de PRUEBA LISTO!");
+	confirm("EL CODIGO CON: "+ x +" FUNCIONA!");
+}
