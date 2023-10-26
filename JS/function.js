@@ -46,3 +46,5 @@ function muestraIMG() {
 		viendo = 0;
 	}
 }
+
+

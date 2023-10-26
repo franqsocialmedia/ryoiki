@@ -94,12 +94,14 @@
 				</div>
 				
 				<hr style="width:80%; margin-left:10%;">
+				
+			
 			</section>
 			
 			<section id="galeria">
 				<img src="IMG/p1.png" class="galeria_img" id="imagen_galeria" onclick="muestraIMG()">
-				<img src="IMG/p2.png" class="galeria_img" id="imagen_galeria" onclick="muestraIMG()">
-				<img src="IMG/p3.png" class="galeria_img" id="imagen_galeria" onclick="muestraIMG()">
+				<img src="IMG/p2.png" class="galeria_img" id="imagen_galeria" onclick="muestraIMG()" draggable="true" ondragstart="drag(event)">
+				<img src="IMG/p3.png" class="galeria_img" id="imagen_galeria" onclick="muestraIMG()" >
 				
 				<!--La siguiente imagen no aparece hasta elegir alguna de la Galeria-->
 				<img src="IMG/no-found.png" class="none NOviendo" id="none">
