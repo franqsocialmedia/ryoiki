@@ -29,6 +29,22 @@
 	<body>
 	
 		<header>
+			<nav>
+				<img src="IMG/sandwich.png" id="sandwich_menu" class="IMG_icono">
+				<a href="#" class="a_fecha">FECHA</a>
+				<img src="IMG/reloj.png" id="tiempo" class="IMG_icono">
+			</nav>
+			
+			<div class="div_agregar">
+				<div>
+				<h2>HOY</h2>
+				<h3>24 May</h3>
+				</div>
+				
+				<button id="btn_agregar" class="btn_agregar" onClick="newTask()">
+				Add New
+				</button>
+			</div>
 		</header>
 			
 		<aside>
@@ -36,9 +52,13 @@
 			
 		<main>
 			<section>
-				<div>
-					<p id="prueba">hola</p>
-				</div>
+				<ul id="lista">
+				<li class="list_item"><input type="checkbox" class="check_seleccion"><div><span>lista</span><i>30 AGO - 17:00</i></div></li>
+				<li class="list_item"><input type="checkbox" class="check_seleccion"><div><span>lista</span><i>30 AGO - 17:00</i></div></li>
+				<li class="list_item"><input type="checkbox" class="check_seleccion"><div><span>lista</span><i>30 AGO - 17:00</i></div></li>
+				<li class="list_item"><input type="checkbox" class="check_seleccion"><div><span>lista</span><i>30 AGO - 17:00</i></div></li>
+				<li class="list_item list_vacio"></li>
+				</ul>
 			</section>
 		</main>
 		

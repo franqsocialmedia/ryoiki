@@ -9,23 +9,48 @@ html{
 	padding:0;
 	margin:0;
 	
-	/*border:1px solid red;*/
+	border:0.5px solid yellow;
 }
 
 body{
+	font-family:Rubik, sans-serif;
+	font-weight:300;
 
+	width:100vw;
+	height:auto;
+	
+	background-color:var(--color5);
 }
 
 header{
+	
+}
 
+nav{
+	display:flex;
+	flex-direction:row;
+	justify-content:space-between;
+	
+	padding-left:10vw;
+	padding-right:10vw;
+	padding-top:5vw;
+	padding-bottom:5vw;
 }
 
 main{
-
+	background-color:var(--color4);
+	
+	padding-top:5vh;
+	padding-bottom:10vh;
+	
+	border-radius:250px 0px 250px 0px;
 }
 
 section{
-
+	width:80vw;
+	min-height:70vh;
+	
+	margin:auto;
 }
 
 aside{
