@@ -4,7 +4,7 @@
 		
 		<link rel="icon shortcut" href="IMG/icon.png">
 		
-		<title>
+		<title id="titulo">
 			APP BASICO DE PRUEBA
 		</title>
 		
@@ -34,6 +34,8 @@
 				<a href="#" class="a_fecha">FECHA</a>
 				<img src="IMG/reloj.png" id="tiempo" class="IMG_icono">
 			</nav>
+			<!--div id="pruebaMove" style="width:100px; height:100px; background-color:black; z-index:3; position:absolute; left:99.5px;">
+			</div-->
 			
 			<div class="div_agregar">
 				<div>
@@ -47,17 +49,17 @@
 			</div>
 		</header>
 			
-		<aside>
+		<aside id="pantalla1" class="x">
+			<div id="div_escritura">
+				<input type="text" class="tarea">
+				<button class="btn_agregar" id="btn_guardar" onClick="registrarTask()">GUARDAR NOTA</button>
+			</div>
 		</aside>
 			
 		<main>
 			<section>
 				<ul id="lista">
-				<li class="list_item"><input type="checkbox" class="check_seleccion"><div><span>lista</span><i>30 AGO - 17:00</i></div></li>
-				<li class="list_item"><input type="checkbox" class="check_seleccion"><div><span>lista</span><i>30 AGO - 17:00</i></div></li>
-				<li class="list_item"><input type="checkbox" class="check_seleccion"><div><span>lista</span><i>30 AGO - 17:00</i></div></li>
-				<li class="list_item"><input type="checkbox" class="check_seleccion"><div><span>lista</span><i>30 AGO - 17:00</i></div></li>
-				<li class="list_item list_vacio"></li>
+				<li class="list_item"><input type="checkbox" class="check_seleccion"><div><span>EJEMPLO DE LISTA</span><i>30 AGO - 17:00</i></div></li>
 				</ul>
 			</section>
 		</main>

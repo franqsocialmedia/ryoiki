@@ -80,11 +80,21 @@ li{
 	
 	animation:btn_in 1s;
 	transition:opacity 1s;
+	transition:left 1s;
 	
 	}
 
 .list_vacio{
 	opacity:0;
+}
+
+.eliminado{
+	display:none;
+	
+	position:absolute;
+	
+	left:300;
+
 }
 
 li div{
