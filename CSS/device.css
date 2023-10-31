@@ -36,12 +36,34 @@ button{
 }
 
 .btn_agregar{
-	width:25vw;
+	width:40vw;
+	height:6vh;
 	
 	border-radius:15px;
 	
-	font-size:1.6em;
+	font-size:2em;
 	font-weight:bold;
+}
+
+
+.tarea {
+	
+	height:30vh;
+	width:70vw;
+	
+	margin-top:3vh;
+	margin-bottom:6vh;
+	padding:20px;
+	
+	font-size:4em;
+	color:var(--color1);
+	
+	font-family:rubik;
+	text-align:left;
+	line-height:1.3;
+	
+	letter-spacing:2;
+
 }
 
 ul{
@@ -50,10 +72,33 @@ ul{
 	display:grid;
 	
 	grid:auto auto auto;
+	
+	
 }
 
 input.check_seleccion{
-	min-width:4vw;
+	appearance: none;
+
+	cursor:pointer;
+	
+	height:80px;
+	width:80px;
+	
+	margin-right:20px;
+	
+	background-color:var(--color3);
+	color:red;
+}
+
+input.check_seleccion:checked{
+	height:80px;
+	width:80px;
+	
+	margin-right:20px;
+	background-color:var(--color4);
+	background-image:url("../IMG/check.png");
+	background-size:cover;
+	background-position:fixed;
 }
 
 li{
@@ -104,13 +149,23 @@ li div{
 	align-items:center;
 	justify-content:center;
 	
+	max-width:60vw;
 }
 
-li span{
+
+
+li p{
 	margin-right:2vh;
+	margin-top:3vh;
+	margin-bottom:2vh;
 	
 	color:var(--color4);
 	
+	text-align:justify;
+	
+	max-width:100%;
+	
+	word-break:break-all;
 }
 
 li i{
@@ -126,4 +181,43 @@ h2{
 }
 h3{
 	font-size:1.2em;
+}
+
+i{
+	max-width:90%;
+	text-align:center;
+	
+	margin-top:0.1vh;
+	margin-bottom:3vh;
+}
+
+#div_escritura{
+	opacity:1;
+}
+
+#div_escritura h1{
+	font-size:6em;
+	
+	margin-top:13vh;
+	
+	color:var(--color3);
+}
+
+.selected{
+
+	background-color:#5E2129;
+}
+
+img.basura{
+	display:none;
+
+	max-width:70px;
+	margin-left:30px;
+}
+
+img.activa{
+	display:block;
+
+	max-width:70px;
+	margin-left:30px;
 }
