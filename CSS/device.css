@@ -70,11 +70,11 @@ ul{
 	list-style-type:none;
 	
 	display:grid;
-	
-	grid:auto auto auto;
+	grid:auto auto auto / auto;
 	
 	
 }
+
 
 input.check_seleccion{
 	appearance: none;
@@ -84,7 +84,7 @@ input.check_seleccion{
 	height:80px;
 	width:80px;
 	
-	margin-right:20px;
+	margin:0;
 	
 	background-color:var(--color3);
 	color:red;
@@ -94,19 +94,19 @@ input.check_seleccion:checked{
 	height:80px;
 	width:80px;
 	
-	margin-right:20px;
+	margin:auto;
 	background-color:var(--color4);
 	background-image:url("../IMG/check.png");
 	background-size:cover;
 	background-position:fixed;
 }
 
-li{
+li.list_item{
 	display:flex;
 	
 	flex-direction:row;
 	align-items:center;
-	justify-content:center;
+	justify-content:space-evenly;
 
 	font-size:2.4em;
 	font-weight:500;
@@ -149,21 +149,19 @@ li div{
 	align-items:center;
 	justify-content:center;
 	
-	max-width:60vw;
+	max-width:40vw;
 }
 
 
 
 li p{
-	margin-right:2vh;
-	margin-top:3vh;
-	margin-bottom:2vh;
+	margin: 2vh 10px 1vh 10px;
 	
 	color:var(--color4);
 	
 	text-align:justify;
 	
-	max-width:100%;
+	max-width:39vw;
 	
 	word-break:break-all;
 }
@@ -174,6 +172,12 @@ li i{
 	font-weight:300;
 	
 	color:var(--color3);
+	
+	text-align:center;
+	
+	margin: auto 10px 2vh 10px;
+	
+	max-width:39vw;
 }
 
 h2{
@@ -183,13 +187,6 @@ h3{
 	font-size:1.2em;
 }
 
-i{
-	max-width:90%;
-	text-align:center;
-	
-	margin-top:0.1vh;
-	margin-bottom:3vh;
-}
 
 #div_escritura{
 	opacity:1;
@@ -204,15 +201,21 @@ i{
 }
 
 .selected{
-
+	
 	background-color:#5E2129;
+	border:1px solid white;
+}
+
+
+img.inactiva{
+	display:none;
 }
 
 img.basura{
-	display:none;
+	display:block-inline;
 
 	max-width:70px;
-	margin-left:30px;
+	margin:auto;
 }
 
 img.activa{

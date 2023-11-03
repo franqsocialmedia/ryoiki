@@ -1,8 +1,6 @@
-
 var espacioLista = document.getElementById('lista');
-
 var btnAgregar = document.getElementById('btn_agregar');
-
+var btnEliminar = document.getElementById('btn_borrar');
 var identify = 0;
 
 function newTask(){
@@ -42,7 +40,7 @@ function registrarTask(){
 	const nuevoCheck = document.createElement("input");
 	nuevoCheck.type = "checkbox";
 	nuevoCheck.classList.add('check_seleccion');
-	nuevoCheck.setAttribute("onclick", "seleccionando(event)");
+	nuevoCheck.setAttribute("onclick", "seleccionando("+identify+")");
 	
 	//DIV
 	const nuevoDiv = document.createElement("div");
@@ -61,7 +59,11 @@ function registrarTask(){
 	const borrador = document.createElement("img");
 	borrador.setAttribute("src","IMG/bin.png");
 	borrador.classList.add('basura');
-	borrador.id = identify;
+	borrador.classList.add('inactiva');
+	borrador.id = "btn_borrar";
+	borrador.setAttribute("value", identify);
+	borrador.setAttribute("name", identify);
+	borrador.setAttribute("onclick", "eliminarTask("+identify+")");
 	
 	espacioLista.appendChild(nuevaLista);
 	
@@ -78,48 +80,100 @@ function registrarTask(){
 	console.log("agregando...");
 	
 	document.querySelector('.tarea').value = "";
+	
+	sessionStorage.setItem("no",identify);
+	sessionStorage.setItem("task",task);
+	sessionStorage.setItem("hora",d);
 	}
 }
 
-document.body.addEventListener("click",eliminarTask);
+//document.body.addEventListener("click",eliminarTask);
 
-function eliminarTask(event){
+function eliminarTask(a){
 
-	var x = event.target;
-	var xID = x.id;
+	var x = document.getElementById(a);
+	var xParent = x.parentElement;
 	
-	if(x.tagName == "IMG" && x.id > 0){
+			x.style.display = "none";
 		
-//		document.getElementById('lista').removeChild(x);
+			console.log("ELIMINADO LISTA: "+ x.id);
+			
 		
-		console.log("ELIMINADO!!!!");	
-		
-	}else{
-		console.log("ERROR DE BORRADO...");
-	}
-	
 	}
 
-function seleccionando(event){
+function seleccionando(x){
 	
-	//var selectA = event.target.nextElementSibling;
-	//var selectB = event.target.parentElement;
-	//var selectC = selectB.contains();
+	var selectLi = document.getElementById(x);
 	
-//	selectA.classList.toggle('selected');
-	//selectB.classList.toggle('selected');
+	console.log(selectLi);
 	
-	var list = document.querySelector("#lista");
-	list.querySelectorAll(".hijos").classList.toggle('selected');
-	//selectC.classList.
+	selectLi.classList.toggle('selected');
+	selectLi.querySelector('.basura').classList.toggle('inactiva');
 	
+}
+
+
+if(sessionStorage.getItem("no")){
+
+console.log("La sesion tiene el No." + sessionStorage.getItem("no"));
+
+var identify = sessionStorage.getItem("no");
+var task = sessionStorage.getItem("task");
+var d = sessionStorage.getItem("hora");
+
 	
+	//LISTA
+	const nuevaLista = document.createElement("li");
+	nuevaLista.className = "list_item";
+	nuevaLista.id = identify;
 	
-	/*if()
-	document.querySelector('.basura').classList.toggle('activa');
+	//INPUT
+	const nuevoCheck = document.createElement("input");
+	nuevoCheck.type = "checkbox";
+	nuevoCheck.classList.add('check_seleccion');
+	nuevoCheck.setAttribute("onclick", "seleccionando("+identify+")");
 	
-	alert(document.querySelector('.basura').classList.toggle('activa'));
-	*/
+	//DIV
+	const nuevoDiv = document.createElement("div");
+	nuevoDiv.id = identify;
+
+	//p
+	const nuevop = document.createElement("p");
+	
+	//ITALIC
+	const nuevoItalic = document.createElement("i");
+	
+	//IMG
+	const borrador = document.createElement("img");
+	borrador.setAttribute("src","IMG/bin.png");
+	borrador.classList.add('basura');
+	borrador.classList.add('inactiva');
+	borrador.id = "btn_borrar";
+	borrador.setAttribute("value", identify);
+	borrador.setAttribute("name", identify);
+	borrador.setAttribute("onclick", "eliminarTask("+identify+")");
+	
+	espacioLista.appendChild(nuevaLista);
+	
+	nuevaLista.appendChild(nuevoCheck);
+	nuevaLista.appendChild(nuevoDiv);
+	nuevaLista.appendChild(borrador);
+	
+	nuevop.innerHTML = task;
+	nuevoItalic.innerHTML = d;
+	
+	nuevoDiv.appendChild(nuevop);
+	nuevoDiv.appendChild(nuevoItalic);
+	
+	console.log("agregando...");
+	
+	document.querySelector('.tarea').value = "";
+
+}else{
+sessionStorage.setItem("no",0);
+
+console.log("Se ha creado una nueva sesion");
+
 }
 	
 /*codigo posiblemente funcional para un juego de click

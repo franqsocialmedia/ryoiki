@@ -71,7 +71,7 @@ section{
 	transition:top 1s ease;
 	transition:opacity 1s ease;
 }
-div.activo{
+.activo{
 	width:100%;
 	height:100%;
 	
