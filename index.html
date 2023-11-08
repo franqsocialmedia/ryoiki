@@ -5,7 +5,7 @@
 		<link rel="icon shortcut" href="IMG/icon.png">
 		
 		<title id="titulo">
-			APP BASICO DE PRUEBA: Lista de Tareas
+			VIDEOGAME CODE
 		</title>
 		
 		<meta name="author" content="Yan-Yan">
@@ -30,81 +30,30 @@
 	
 		<header>
 			<nav>
-				<img src="IMG/sandwich.png" id="sandwich_menu" class="IMG_icono">
-				<a href="#" class="a_fecha">FECHA</a>
-				<img src="IMG/reloj.png" id="tiempo" class="IMG_icono">
 			</nav>
-			<!--div id="pruebaMove" style="width:100px; height:100px; background-color:black; z-index:3; position:absolute; left:99.5px;">
-			</div-->
-			
-			<div class="div_agregar">
-				<div>
-				<h2>HOY</h2>
-				<h3>24 May</h3>
-				</div>
-				
-				<button id="btn_agregar" class="btn_agregar" onClick="newTask()">
-				Add New
-				</button>
-			</div>
 		</header>
 		
-		<div class="pantalla2" onfocus="registrarTask()">
-		<aside id="pantalla1" class="x">
-			<div id="div_escritura">
-				<h1>
-					NEW TASK
-				</h1>
-				<textarea class="tarea"></textarea>
-			<br>
-				<button class="btn_agregar" id="btn_guardar" onClick="registrarTask()">GUARDAR NOTA</button>
+		
+		<aside>
+			<div id="barra" value="0">
+				
 			</div>
 		</aside>
 		</div>
 			
 		<main>
 			<section>
-				<ul id="lista">
-				<!--Eliminar Comentario para pruebas con tareas predeterminadas
-				
-				<li class="list_item" id="0">
-				
-				<input type="checkbox" class="check_seleccion" onclick="seleccionando(0)">
-				
-				<div id="0">
-				<p>EJEMPLO DE LISTA</p>
-				<i>30 AGO - 17:00</i>
-				</div>
-				
-				<img src="IMG/bin.png" class="basura inactiva" value="0" name="0" id="btn_borrar" onclick="eliminarTask(0)">
-				
-				</li>
-				<li class="list_item" id="1">
-				
-				<input type="checkbox" class="check_seleccion" onclick="seleccionando(1)">
-				
-				<div id="1">
-				<p>EJEMPLO DE LISTA</p>
-				<i>31 AGO - 17:11</i>
-				</div>
-				
-				<img src="IMG/bin.png" class="basura inactiva" value="1" name="1" id="btn_borrar" onclick="eliminarTask(1)">
-				
-				</li>
-				<li class="list_item" id="2">
-				
-				<input type="checkbox" class="check_seleccion" onclick="seleccionando(2)">
-				
-				<div id="2">
-				<p>EJEMPLO DE LISTA</p>
-				<i>32 AGO - 27:22</i>
-				</div>
-				
-				<img src="IMG/bin.png" class="basura inactiva" value="2" name="2" id="btn_borrar" onclick="eliminarTask(2)">
-				
-				</li>-->
-				</ul>
+				<video class="video" controls paused muted id="reproductor">
+					<source src="VIDEO/v.mp4" type="video/mp4">
+				</video>
 			</section>
+			
+		<div>
+			<button id="subir" onclick="subir()">SUBIR VOLUMEN
+			</button>
+			<button id="bajar" onclick="bajar()">BAJAR VOLUMEN
+			</button>
+		</div>
 		</main>
 		
 		<footer>
