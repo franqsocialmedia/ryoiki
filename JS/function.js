@@ -3,6 +3,14 @@
 	var barra = document.getElementById('barra');
 	vid.volume = 0.1;
 	var porcentaje = vid.volume*100;
+	var protagonista = document.getElementById('personaje');
+	var obstaculo = document.getElementById('obstaculo');
+	
+	if(protaPosition){
+	
+	}else{
+	var protaPosition = protagonista.style.left = 0;
+	}
 	
 	barra.style.width = porcentaje;
 	
@@ -30,7 +38,15 @@ function bajar(){
 	}
 	
 document.body.addEventListener("keydown", boton);
+
+function avanzar(){
+
+	console.log('avanzar '+ protagonista.style.position.left);
+	protagonista.style.position.left = protagonista.style.position.left + 700;
 	
+	
+}
+
 function boton(event){
 
 		var btnRight = document.getElementById('btn_4');
@@ -52,6 +68,8 @@ function boton(event){
 		btnUp.style.background = 'black';
 		btnDown.style.background = 'black';
 		btnEspacio.style.background = 'black';
+		
+		avanzar();
 		
 		//IZQUIERDA
 		}else if(value == 100 || value == 65 || value == 37){

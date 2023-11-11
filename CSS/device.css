@@ -38,6 +38,13 @@ section #personaje{
 	height:70px;
 	
 	display:inline-block;
+	
+	position:relative;
+	left:0;
+	
+	transform:translateX(100px);
+	
+	transition:translateX 1s;
 }
 section #obstaculo{
 	background-color:red;
@@ -46,9 +53,10 @@ section #obstaculo{
 	height:40px;
 	
 	position:relative;
-	left:70%;
+	right:0;
 	
 	display:inline-block;
+	
 }
 section #suelo{
 	background-color:yellow;
