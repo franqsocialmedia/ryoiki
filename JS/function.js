@@ -1,3 +1,24 @@
+//SESION
+
+sessionStorage.setItem("prota_x",0);
+sessionStorage.setItem("prota_y",115);
+
+sessionStorage.setItem("enemy_x",200);
+sessionStorage.setItem("enemy_y",120);
+
+sessionStorage.setItem("ball_x",150);
+sessionStorage.setItem("ball_y",30);
+sessionStorage.setItem("tamano",5);
+
+sessionStorage.setItem("direccion","r");
+
+sessionStorage.setItem('diagonal',0)
+
+var inicio = 0;
+
+var r;
+var nivel1 = 1;
+var nivel2 = 0.3;
 	
 	var vid = document.getElementById('reproductor');
 	var barra = document.getElementById('barra');
@@ -35,107 +56,195 @@ document.body.addEventListener("keydown", boton);
 document.body.addEventListener("keyup", soltar);
 
 var tu = 0;
-var pelota = 100;
 
 //CANVAS
 var canvas = document.getElementById("canvas");
+canvas.style.width = '80%';
+canvas.style.height = '30%';
+
 var objeto = canvas.getContext('2d');
 
-const getCharacter = (color='blue') => ({
-	x:0,
-	y:0,
-	w:10,
-	h:30,
+var ancho = 10;
+var alto = 30;
+
+var limitW = canvas.width - ancho;
+var limitH = canvas.width - alto;
+
+var mitad = canvas.width / 2;
+
+sessionStorage.setItem('enemy_x',(canvas.width-ancho));
+
+//TU PERSONAJE
+const getCharacter = (x=sessionStorage.getItem('prota_x'),y=sessionStorage.getItem('prota_y'),color='green') => ({
+	x,
+	y,
+	w:ancho,
+	h:alto,
 	collision:this.y + this.h,
 	color,
 	
 	aparece(x,y) {
-		objeto.fillStyle = this.color
-		objeto.fillRect(x,y,this.w,this.h)
+		if(tu < 0){
+			this.y --;
+		}else if (tu > 0){
+			this.y ++;
+		}
+	
+			objeto.fillStyle = this.color
+			objeto.fillRect(x,y,this.w,this.h)
 	}
 });
 
-const getBall = (t=5,color='black') => ({
-	x:100,
-	y:100,
+//ENEMIGOS
+const getFoe = (x2=sessionStorage.getItem('enemy_x'),y2=sessionStorage.getItem('enemy_y'),color='green') => ({
+	x2,
+	y2,
+	w:ancho,
+	h:alto,
+	collision:this.y2 + this.h,
+	color,
+	
+	aparece(x2,y2) {
+	
+			objeto.fillStyle = this.color
+			objeto.fillRect(x2,y2,this.w,this.h)
+	}
+});
+
+const prota = getCharacter(sessionStorage.getItem("prota_x"), sessionStorage.getItem("prota_y"), 'blue');
+const enemy = getFoe(sessionStorage.getItem('enemy_x'), sessionStorage.getItem('enemy_y'),'red');
+
+var x_Prota = sessionStorage.getItem('prota_x');
+var y_Prota = sessionStorage.getItem('prota_y');
+
+var x_Enemy = sessionStorage.getItem('enemy_x');
+var y_Enemy = sessionStorage.getItem('enemy_y');
+
+//PELOTA
+const getBall = (t=sessionStorage.getItem('tamano'),x3=sessionStorage.getItem('ball_x'),y3=sessionStorage.getItem('ball_y'),color='black',direction=sessionStorage.getItem('direccion')) => ({
+	x3,
+	y3,
 	w:t,
 	h:t,
 	color,
-	direction:'r',
-	
-	
-	aparece(x) {
-	
-	if(this.direction == 'r'){
-		
-			this.x++;
-		if(this.x > canvas.width - prota.w){
-			this.direction = 'l';
-		}
-	}else{
-			this.x--;
-		if (this.x < prota.w && this.y == prota.y){
-			this.direction = 'r';
-		}
-	}
-		
+	direction,
+
+	aparece(x3,y3,direction){
 		objeto.fillStyle = this.color
-		objeto.fillRect(this.x,this.y,this.w,this.h)
-	}
+		objeto.fillRect(this.x3,this.y3,this.w,this.h)
+}
 });
 
-const prota = getCharacter();
-const enemy = getCharacter('red');
-const ball = getBall();
-
-var x_Prota = 0;
-var y_Prota = 0;
-
-var x_Enemy = canvas.width - prota.w;
-var y_Enemy = 100;
+const ball = getBall(t=sessionStorage.getItem('tamano'),x3=sessionStorage.getItem('ball_x'),y3=sessionStorage.getItem('ball_y'),color='black',direction=sessionStorage.getItem('direccion'));
 
 console.log('PROTAGONISTA: '+prota);
 console.log('ENEMIGO: '+enemy);
 
+var nivel = ball.x3;
+
+//FUNCION: REBOTE
+function rebote(MAX,MIN){
+	var g = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+	
+	return g;
+}
+
 const update = () => {
 	objeto.clearRect(0,0,canvas.width,canvas.height);
 	
-	if(tu == 0){
-	prota.aparece(x_Prota,y_Prota);
-	enemy.aparece(x_Enemy,y_Enemy);
+//MOVIMIENTO PELOTA
+	if(ball.direction == 'r'){
+		
+		ball.aparece(ball.x3,ball.y3,sessionStorage.getItem('direccion'));
+		sessionStorage.setItem('ball_x',ball.x3++);
+		sessionStorage.setItem('ball_y',ball.y3);
+		}
+	if(ball.direction == 'l'){	
 	
-	}else if(tu > 0){
-	prota.aparece(x_Prota,y_Prota++);
-	enemy.aparece(x_Enemy,y_Enemy);
+		ball.aparece(ball.x3,ball.y3,sessionStorage.getItem('direccion'));
+		sessionStorage.setItem('ball_x',ball.x3--);
+		sessionStorage.setItem('ball_y',ball.y3);
+	}	
 	
-	}else if(tu < 0){
-	prota.aparece(x_Prota,y_Prota--);
-	enemy.aparece(x_Enemy,y_Enemy);
+	
+	if(ball.direction == 'r' && ball.x3 == canvas.width - enemy.w && enemy.y2 <= ball.y3 && enemy.y2 + enemy.h > ball.y3){
+		ball.color = 'red';
+		ball.direction = 'l';
+		sessionStorage.setItem('direccion',ball.direction);
+		
+		console.log('GOLPEO AL RIVAL!');
+	}
+	
+	if(ball.direction == 'l' && prota.x + prota.w >= ball.x3 && prota.y <= ball.y3 && prota.y + prota.h > ball.y3){
+		ball.color = 'orange';
+		ball.direction = 'r';
+		sessionStorage.setItem('direccion',ball.direction);
+		
+		console.log('TE GOLPEO!');
 	}
 	
 	
+//REBOTE PELOTA
+	if(ball.y3 == 0){
+		sessionStorage.setItem('direccion','r');
+	
+	}else if(ball.y3 == canvas.height){
+		sessionStorage.setItem('direccion','l');
+	}
 
 	
 	
-	if(ball.x < (canvas.x - prota.w)){
-		ball.aparece();
-	}else{
-		ball.aparece();
+//TUS MOVIMIENTOS
+	if(tu < 0){
+		prota.aparece(sessionStorage.getItem('prota_x'),prota.y--);
+		sessionStorage.setItem('prota_y',prota.y);
+	}else if(tu > 0){
+		prota.aparece(sessionStorage.getItem('prota_x'),prota.y++);
+		sessionStorage.setItem('prota_y',prota.y);	
+	}else if(tu == 0){
+		prota.aparece(sessionStorage.getItem('prota_x'),prota.y);
+		sessionStorage.setItem('prota_y',prota.y);
 	}
 	
+//MOVIMIENTO ENEMIGO
+	if(ball.y3 > enemy.y2){
+		enemy.aparece(sessionStorage.getItem('enemy_x'),enemy.y2++);
+		sessionStorage.setItem('enemy_y',enemy.y2);
+		
+	}else if(ball.y3 < enemy.y2){
+		enemy.aparece(sessionStorage.getItem('enemy_x'),enemy.y2--);
+		sessionStorage.setItem('enemy_y',enemy.y2);
+		
+	}else if(ball.y3 == enemy.y2){
+		enemy.aparece(sessionStorage.getItem('enemy_x'),enemy.y2);
+		sessionStorage.setItem('enemy_y',enemy.y2);
+	}
 	
-console.log('POSITION: '+prota.y);
-console.log('TAMANO: '+ prota.h);
+//PUNTOS
+	if(ball.x3 > canvas.width){
+		alert("PUNTO PARA TI");
+		
+		sessionStorage.setItem('direccion','l');
+		ball.direction = 'l';
+		ball.x3 = mitad;
+		ball.aparece(ball.x3,ball.y3);
+		
+	}else if(ball.x3 < 0){
+		alert("PUNTO PARA EL RIVAL");
+		
+		sessionStorage.setItem('direccion','r');
+		ball.direction = 'r';
+		ball.x3 = mitad;
+		ball.aparece(ball.x3,ball.y3);
+		
+	}
+console.log('POSITION: '+sessionStorage.getItem('prota_y'));
 	
 	requestAnimationFrame(update);
 }
 
 requestAnimationFrame(update);
 
-//movimientos
-function avanzar(){
-
-}
 
 //controles
 function boton(event){
@@ -200,6 +309,7 @@ function boton(event){
 		}else if(value == 32){
 		console.log('ESPACIO => ESPACIO ' + value);
 		
+		rebote(1,canvas.height);
 		
 		btnEspacio.style.background = 'red';
 		btnLeft.style.background = 'black';
