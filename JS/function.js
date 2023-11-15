@@ -12,10 +12,11 @@ sessionStorage.setItem("tamano",5);
 
 sessionStorage.setItem("direccion","r");
 
-sessionStorage.setItem('diagonal',0)
+sessionStorage.setItem('diagonal',1)
 
 var inicio = 0;
-
+var rangoProta;
+var rangoEnemy;
 var r;
 var nivel1 = 1;
 var nivel2 = 0.3;
@@ -56,6 +57,9 @@ document.body.addEventListener("keydown", boton);
 document.body.addEventListener("keyup", soltar);
 
 var tu = 0;
+
+//1 = lineal .... 2 = diagonal arriba .... 3 = diagonal abajo
+var diagonal = 1;
 
 //CANVAS
 var canvas = document.getElementById("canvas");
@@ -130,6 +134,7 @@ const getBall = (t=sessionStorage.getItem('tamano'),x3=sessionStorage.getItem('b
 	direction,
 
 	aparece(x3,y3,direction){
+		
 		objeto.fillStyle = this.color
 		objeto.fillRect(this.x3,this.y3,this.w,this.h)
 }
@@ -142,76 +147,138 @@ console.log('ENEMIGO: '+enemy);
 
 var nivel = ball.x3;
 
-//FUNCION: REBOTE
-function rebote(MAX,MIN){
-	var g = Math.floor(Math.random() * (MAX - MIN + 1)) + MIN;
+//FUNCION: RANDOM
+function rand(MIN,MAX){
+	var numero = [MIN];
 	
-	return g;
+	for(var x=MIN; x<=MAX; x++){
+		numero.push(x);
+	}
+	
+	numero = numero.sort(function() {return Math.random() - 0.5});
+	
+	return numero[0];
+	
+	sessionStorage.setItem('diagonal',numero[0]);
 }
 
 const update = () => {
 	objeto.clearRect(0,0,canvas.width,canvas.height);
 	
+	
 //MOVIMIENTO PELOTA
 	if(ball.direction == 'r'){
-		
 		ball.aparece(ball.x3,ball.y3,sessionStorage.getItem('direccion'));
 		sessionStorage.setItem('ball_x',ball.x3++);
+		
+		if(sessionStorage.getItem('diagonal') == 1){
 		sessionStorage.setItem('ball_y',ball.y3);
+		console.log('recto');
+		
+		}else if(sessionStorage.getItem('diagonal') == 2 && ball.y3 > 0){
+			if(ball.y3 < canvas.height){
+			sessionStorage.setItem('ball_y',ball.y3++);
+			console.log('Bajando');
+			}else{
+			sessionStorage.setItem('ball_y',ball.y3--);
+			console.log('Subiendo SPECIAL');
+			
+			r = 3;
+			sessionStorage.setItem('diagonal',r);
+			}
+		}else if(sessionStorage.getItem('diagonal') == 3 && ball.y3 < canvas.height){
+			if(ball.y3 > 0){
+			sessionStorage.setItem('ball_y',ball.y3--);
+			console.log('Subiendo');
+			}else{
+			sessionStorage.setItem('ball_y',ball.y3++);
+			console.log('Bajando SPECIAL');
+			
+			r = 2;
+			sessionStorage.setItem('diagonal',r);
+			}
 		}
+	}
+		
 	if(ball.direction == 'l'){	
-	
 		ball.aparece(ball.x3,ball.y3,sessionStorage.getItem('direccion'));
 		sessionStorage.setItem('ball_x',ball.x3--);
+		
+		if(sessionStorage.getItem('diagonal') == 1){
 		sessionStorage.setItem('ball_y',ball.y3);
-	}	
+		console.log('recto');
+		
+		}else if(sessionStorage.getItem('diagonal') == 2 && ball.y3 > 0){
+			if(ball.y3 < canvas.height){
+			sessionStorage.setItem('ball_y',ball.y3++);
+			console.log('Bajando');
+			}else{
+			sessionStorage.setItem('ball_y',ball.y3--);
+			console.log('Subiendo SPECIAL');
+			
+			r = 3;
+			sessionStorage.setItem('diagonal',r);
+			}
+		}else if(sessionStorage.getItem('diagonal') == 3 && ball.y3 < canvas.height){
+			if(ball.y3 > 0){
+			sessionStorage.setItem('ball_y',ball.y3--);
+			console.log('Subiendo');
+			}else{
+			sessionStorage.setItem('ball_y',ball.y3++);
+			console.log('Bajando SPECIAL');
+			
+			r = 2;
+			sessionStorage.setItem('diagonal',r);
+			}
+		}
+	}
+//GOLPEANDO PERSONAJES
+
 	
-	
-	if(ball.direction == 'r' && ball.x3 == canvas.width - enemy.w && enemy.y2 <= ball.y3 && enemy.y2 + enemy.h > ball.y3){
+	if(ball.direction == 'r' && ball.x3 == (canvas.width - enemy.w) && enemy.y2 <= ball.y3 && (enemy.y2 + enemy.h) > ball.y3){
 		ball.color = 'red';
 		ball.direction = 'l';
 		sessionStorage.setItem('direccion',ball.direction);
 		
-		console.log('GOLPEO AL RIVAL!');
+		//console.log('GOLPEO AL RIVAL!');
+
+			r = rand(2,3);
+			sessionStorage.setItem('diagonal',r);
 	}
 	
-	if(ball.direction == 'l' && prota.x + prota.w >= ball.x3 && prota.y <= ball.y3 && prota.y + prota.h > ball.y3){
+	if(ball.direction == 'l' && (prota.x + prota.w) >= ball.x3 && prota.y <= ball.y3 && (prota.y + prota.h) > ball.y3){
 		ball.color = 'orange';
 		ball.direction = 'r';
 		sessionStorage.setItem('direccion',ball.direction);
 		
-		console.log('TE GOLPEO!');
-	}
-	
-	
-//REBOTE PELOTA
-	if(ball.y3 == 0){
-		sessionStorage.setItem('direccion','r');
-	
-	}else if(ball.y3 == canvas.height){
-		sessionStorage.setItem('direccion','l');
+		//console.log('TE GOLPEO!');
+		
+			r = rand(2,3);
+			sessionStorage.setItem('diagonal',r);
 	}
 
 	
 	
 //TUS MOVIMIENTOS
-	if(tu < 0){
+	if(tu < 0 && prota.y > 0){
 		prota.aparece(sessionStorage.getItem('prota_x'),prota.y--);
 		sessionStorage.setItem('prota_y',prota.y);
-	}else if(tu > 0){
+	}else if(tu > 0 && prota.y < (canvas.height - prota.h)){
 		prota.aparece(sessionStorage.getItem('prota_x'),prota.y++);
 		sessionStorage.setItem('prota_y',prota.y);	
 	}else if(tu == 0){
 		prota.aparece(sessionStorage.getItem('prota_x'),prota.y);
 		sessionStorage.setItem('prota_y',prota.y);
+	}else{
+		tu = 0;
 	}
 	
 //MOVIMIENTO ENEMIGO
-	if(ball.y3 > enemy.y2){
+	if(ball.y3 > enemy.y2 && enemy.y2 < (canvas.height - enemy.h)){
 		enemy.aparece(sessionStorage.getItem('enemy_x'),enemy.y2++);
 		sessionStorage.setItem('enemy_y',enemy.y2);
 		
-	}else if(ball.y3 < enemy.y2){
+	}else if(ball.y3 < enemy.y2 && enemy.y2 > 0){
 		enemy.aparece(sessionStorage.getItem('enemy_x'),enemy.y2--);
 		sessionStorage.setItem('enemy_y',enemy.y2);
 		
@@ -227,7 +294,9 @@ const update = () => {
 		sessionStorage.setItem('direccion','l');
 		ball.direction = 'l';
 		ball.x3 = mitad;
+		ball.y3 = canvas.height / 2;
 		ball.aparece(ball.x3,ball.y3);
+		sessionStorage.setItem('diagonal',1);
 		
 	}else if(ball.x3 < 0){
 		alert("PUNTO PARA EL RIVAL");
@@ -235,10 +304,12 @@ const update = () => {
 		sessionStorage.setItem('direccion','r');
 		ball.direction = 'r';
 		ball.x3 = mitad;
+		ball.y3 = canvas.height / 2;
 		ball.aparece(ball.x3,ball.y3);
+		sessionStorage.setItem('diagonal',1);
 		
 	}
-console.log('POSITION: '+sessionStorage.getItem('prota_y'));
+//console.log('POSITION: '+sessionStorage.getItem('prota_y'));
 	
 	requestAnimationFrame(update);
 }
@@ -291,7 +362,11 @@ function boton(event){
 		btnRight.style.background = 'black';
 		btnEspacio.style.background = 'black';
 		
+		if(prota.y >= canvas.height){
+		tu = 0;
+		}else{
 		tu = 1;
+		}
 		
 		//ARRIBA
 		}else if(value == 119 || value == 87 || value == 38){
@@ -303,13 +378,18 @@ function boton(event){
 		btnDown.style.background = 'black';
 		btnEspacio.style.background = 'black';
 		
+		if(prota.y <= 0){
+		tu = 0;
+		}else{
 		tu = -1;
+		}
 		
 		//BARRA
 		}else if(value == 32){
 		console.log('ESPACIO => ESPACIO ' + value);
 		
-		rebote(1,canvas.height);
+		
+		console.log('POSITION BALL: '+ball.y3);
 		
 		btnEspacio.style.background = 'red';
 		btnLeft.style.background = 'black';
