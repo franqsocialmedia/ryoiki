@@ -5,7 +5,7 @@
 		<link rel="icon shortcut" href="IMG/icon.png">
 		
 		<title id="titulo">
-			VIDEOGAME CODE
+			VIDEOGAME 2 CODE
 		</title>
 		
 		<meta name="author" content="Yan-Yan">
@@ -23,6 +23,7 @@
 		<link rel="stylesheet" href="CSS/device.css">
 		
 		<script src="JS/function.js" defer></script>
+		<script src="JS/controles.js" defer></script>
 		
 	</head>
 	
@@ -35,38 +36,14 @@
 		
 		
 		<aside>
-			<div id="barra" value="0">
-				
-			</div>
 		</aside>
 		</div>
 			
 		<main>
-			<p>
-			
-			</p>
+		<canvas id="canvas">
+		</canvas>
 		
-			<section>
-			<video class="video" controls paused muted id="reproductor">
-				<source src="VIDEO/v.mp4" type="video/mp4">
-			</video>
-			</section>
-			
-		<div>
-			<button id="subir" onclick="subir()">SUBIR VOLUMEN
-			</button>
-			<button id="bajar" onclick="bajar()">BAJAR VOLUMEN
-			</button>
-		</div>
-		
-			<section id="paracanvas">
-				<canvas id="canvas">
-				</canvas>
-			</section>
-		</main>
-		
-		<footer>
-		
+		<section id="botones">
 			<button id="btn_2" onclick="boton(119)">
 			Up
 			</button>
@@ -90,6 +67,10 @@
 			<button id="btn_5" onclick="boton(32)">
 			Espacio
 			</button>
+		</section>
+		</main>
+		
+		<footer>
 		</footer>
 		
 	</body>
