@@ -8,3 +8,6 @@ html{
 	
 	border:solid 1px red;
 }
+body{
+height:100%;
+}

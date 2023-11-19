@@ -25,3 +25,8 @@ button#btn_5{
 	width:60vw;
 	height:12vw;
 }
+p{
+	font-size:3em;
+	color:blue;
+	text-align:center;
+}
