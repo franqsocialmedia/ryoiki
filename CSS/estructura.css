@@ -23,7 +23,7 @@ main{
 section#playmat{
 	background-color:var(--color1);
 	
-	height:70%;
+	height:100%;
 	width:100%;
 	
 	display:flex;
@@ -89,8 +89,8 @@ div#batterySide{
 }
 
 div.yourCard{
-	width:15%;
-	height:80%;
+	width:8%;
+	height:90%;
 	
 	background:url('../IMG/card.png');
 	background-size:cover;
@@ -110,8 +110,8 @@ div.yourCard{
 }
 
 div.foeCard{
-	width:15%;
-	height:80%;
+	width:8%;
+	height:90%;
 	
 	background:url('../IMG/card.png');
 	background-size:cover;
@@ -131,8 +131,8 @@ div.foeCard{
 }
 
 div.deckCard{
-	width:55%;
-	height:80%;
+	width:35%;
+	height:90%;
 	
 	background:url('../IMG/card.png');
 	background-size:cover;
@@ -152,8 +152,8 @@ div.deckCard{
 }
 
 div.nextCard{
-	width:45%;
-	height:80%;
+	width:30%;
+	height:90%;
 	
 	background:url('../IMG/card.png');
 	background-size:cover;

@@ -8,6 +8,16 @@ var siguiente = 0;
 let orden = 0;
 let next = 0;
 const baraja = [];
+let turno = 0;
+var temp = 0;
+var sustitucion = 0;
+let seleccion = [];
+let a;
+let b;
+
+var tusCartas = [];
+var susCartas = [];
+var siguientesCartas = [];
 
 var playmat = document.getElementById('playmat');
 var yourCards = document.getElementById('yourSide');
@@ -19,6 +29,27 @@ var deck = document.getElementById('deckSide');
 document.getElementById('centralSide').addEventListener('click',mostrar);
 let five = 1;
 
+
+function sfx(){
+	let cardSFX = document.getElementById('sound_SFX');
+	
+	cardSFX.play();
+}
+
+function leToca(){
+	if(turno == 0){
+		turno = 1;
+		console.log("TU TURNO");
+		
+	}else if(turno == 1){
+		turno = 0;
+		console.log("TURNO RIVAL");
+		
+	}else{
+		alert("ERROR DE TURNO");
+	}
+	
+}
 
 function nuevosNaipes(){
 	for(x = 0; x<=52; x++){
@@ -77,7 +108,7 @@ function nuevosNaipes(){
 	}
 
 	//EL JOKER
-	naipeNumero[0] = 'Joker';
+	naipeNumero[0] = 0;
 	naipe[0] = 'Joker';
 }
 
@@ -103,7 +134,6 @@ function barajar(){
 	
 	baraja.sort(function(){return 0.5 - Math.random()});
 	console.log("NUEVO ORDEN: "+baraja);
-	console.log("NUEVO NAIPE: "+naipe);
 }
 
 function mostrar(){
@@ -130,6 +160,8 @@ function mostrar(){
 		//baraja.splice(orden,1);
 		
 		orden++;
+		
+		sfx();
 	}
 }
 
@@ -153,7 +185,14 @@ function startGame(){
 		//SIMBOLO/PALO
 		const nuevoPalo = document.createElement("span");
 
-		if(you <= 5){
+		if(you < 5){
+		
+		if(naipeNumero[baraja[nxt]] == 0){
+			nxt++;
+		}
+		tusCartas[you] = naipeNumero[baraja[nxt]];
+		nuevoNaipe.setAttribute("id",tusCartas[you]);
+		nuevoNaipe.setAttribute("value",tusCartas[you]);
 		you++;
 		nxt++;
 		//TUS CARTAS
@@ -187,7 +226,11 @@ function startGame(){
 		console.log("Tomaste una carta!");
 		
 		
-		}else if(foe<=5){
+		}else if(foe<5){
+		
+		susCartas[foe] = naipeNumero[baraja[nxt]];
+		nuevoNaipe.setAttribute("id",susCartas[foe]);
+		nuevoNaipe.setAttribute("value",susCartas[foe]);
 		foe++;
 		nxt++;
 		//SUS CARTAS (FOE)
@@ -220,21 +263,33 @@ function startGame(){
 		
 		console.log("El rival tomo una carta!");
 		
+			if(foe=>5){
+		if(naipeNumero[baraja[nxt]] == 0){
+			nxt++;
+		}
+			siguientesCartas[dck] = naipeNumero[baraja[nxt]];
+			nuevoNaipe.setAttribute("id",siguientesCartas[dck]);
+			nuevoNaipe.setAttribute("value",siguientesCartas[dck]);
+			}
+		
 		}
 }
 }
 	
 	
-	if(naipe[baraja[nxt]] == "Joker"){
+	if(naipeNumero[baraja[nxt]] == 0){
 		nxt++;
 	}
 	
 	
-	if(foe>5 && you>5){
+	if(foe>4 && you>4){
 	
-	if(naipe[baraja[nxt]] == "Joker"){
+	if(naipeNumero[baraja[nxt]] == 0){
 		nxt++;
 	}else{
+
+	dck++;
+
 	//NAIPE
 	const nuevoNaipe = document.createElement("b");
 	//SIMBOLO/PALO
@@ -271,11 +326,17 @@ function startGame(){
 		console.log("SIGUIENTE CARTA");
 		
 		nxt++;
+			if(naipeNumero[baraja[nxt]] == 0){
+			nxt++;
+			}
+		siguientesCartas[dck] = naipeNumero[baraja[nxt]];
+		nuevoNaipe.setAttribute("id",siguientesCartas[dck]);
+		nuevoNaipe.setAttribute("value",siguientesCartas[dck]);
 	}
 	
-	if(foe>5 && you>5){
+	if(foe>4 && you>4){
 	
-	if(naipe[baraja[nxt]] == "Joker"){
+	if(naipeNumero[baraja[nxt]] == 0){
 		
 		nxt++;
 	
@@ -314,6 +375,7 @@ function startGame(){
 		nuevaCarta.appendChild(nuevoPalo);
 		
 		console.log("RESTANTE EN BATTERY");
+		
 		}
 	}
 	}
@@ -323,9 +385,96 @@ console.log('---------------');
 console.log('Tu tienes: '+yourCards.childElementCount+' cartas');
 console.log('El rival tiene: '+foeCards.childElementCount+' cartas');
 console.log('');
-console.log('La siguiente carta es: '+nextCard.value+' cartas');
-console.log('Quedan en el Deck: '+deck.childElementCount+' cartas');
+console.log(tusCartas);
+console.log(susCartas);
+console.log(siguientesCartas);
 
+leToca();
 }
 
 startGame();
+
+var carta = document.getElementById('yourSide');
+carta.addEventListener('click',accion);
+
+function accion(event){
+	let card = event.target;
+	
+	function cambio(primera,segunda){
+		console.log("SE GENERO UN CAMBIO");
+	
+						
+		a = document.getElementById(a.id);
+		b = document.getElementById(b.id);
+		
+		let hermanoA = a.nextElementSibling;
+		let hermanoB = b.nextElementSibling;
+		
+	//VALOR	
+		b.id = seleccion[sustitucion];
+		sustitucion++;
+		a.id = seleccion[sustitucion];
+		sustitucion = 0;
+		
+		a.innerHTML = naipe[naipeNumero[a.id]];
+		b.innerHTML = naipe[naipeNumero[b.id]];
+	
+	//COLOR
+		if(naipeColor[naipeNumero[a.id]] == "Negra"){
+			a.parentNode.style.color = "white";
+		}else if(naipeColor[naipeNumero[a.id]] == "Roja"){
+			a.parentNode.style.color = "red";
+		}
+		
+		if(naipeColor[naipeNumero[b.id]] == "Negra"){
+			b.parentNode.style.color = "white";
+		}else if(naipeColor[naipeNumero[b.id]] == "Roja"){
+			b.parentNode.style.color = "red";
+		}
+	
+	//PALO
+		if(naipePalo[naipeNumero[a.id]] == "Picas"){
+			hermanoA.innerHTML = "&spades;";
+		}else if(naipePalo[naipeNumero[a.id]] == "Treboles"){
+			hermanoA.innerHTML = "&clubs;";
+		}else if(naipePalo[naipeNumero[a.id]] == "Corazones"){
+			hermanoA.innerHTML = "&hearts;";
+		}else if(naipePalo[naipeNumero[a.id]] == "Diamantes"){
+			hermanoA.innerHTML = "&diams;";
+		}
+		
+		if(naipePalo[naipeNumero[b.id]] == "Picas"){
+			hermanoB.innerHTML = "&spades;";
+		}else if(naipePalo[naipeNumero[b.id]] == "Treboles"){
+			hermanoB.innerHTML = "&clubs;";
+		}else if(naipePalo[naipeNumero[b.id]] == "Corazones"){
+			hermanoB.innerHTML = "&hearts;";
+		}else if(naipePalo[naipeNumero[b.id]] == "Diamantes"){
+			hermanoB.innerHTML = "&diams;";
+		}
+	}
+	
+	if(card.firstChild.tagName == "B"){
+	
+		card.classList.toggle('cambiar');
+		
+		if(sustitucion>1){
+		sustitucion = 0;
+		}
+		if(sustitucion == 0){
+			a = card.firstChild;
+			seleccion[sustitucion] = a.id;
+			
+			sustitucion++;
+		}else if(sustitucion == 1){
+			b = card.firstChild;
+			seleccion[sustitucion] = b.id;
+			
+			sustitucion = 0;
+			
+			cambio(a.id,b.id);
+		}
+		
+		console.log(seleccion);
+	}
+}
